@@ -1,0 +1,13 @@
+{
+  "name": "hongchuan-franchise-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "弘川藏酒閣 加盟資料站",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

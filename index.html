@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>弘川藏酒閣｜加盟常見問題 蒐集表</title>
+<style>
+  :root{
+    --bg:#f7f4ef;
+    --paper:#fffdfa;
+    --ink:#2a231c;
+    --ink-soft:#6b5f52;
+    --line:#e3dbcf;
+    --amber:#a8763c;
+    --amber-dark:#7d551f;
+    --amber-soft:#f3e6d2;
+    --red:#b3452f;
+    --green:#4b7a4a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 140px}
+
+  /* ---------- header ---------- */
+  header{
+    background:linear-gradient(160deg,#2f2620,#4a3826);
+    color:#f5ece0;
+    padding:38px 20px 30px;
+    margin-bottom:26px;
+  }
+  header .inner{max-width:900px;margin:0 auto}
+  .brand{
+    font-size:13px;letter-spacing:.34em;color:#d8b784;
+    text-transform:uppercase;margin-bottom:10px;
+  }
+  h1{margin:0 0 12px;font-size:27px;font-weight:700;letter-spacing:.02em}
+  header p{margin:0;color:#cbbba6;font-size:14.5px;max-width:640px}
+  .meta-line{
+    margin-top:18px;display:flex;flex-wrap:wrap;gap:10px 22px;
+    font-size:13px;color:#bfae98;
+  }
+  .meta-line b{color:#e8d5b8;font-weight:600}
+
+  /* ---------- toolbar ---------- */
+  .toolbar{
+    position:sticky;top:0;z-index:40;
+    background:rgba(247,244,239,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:12px 20px;
+    margin:0 -20px 24px;
+  }
+  .toolbar-inner{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+  .progress-box{flex:1;min-width:190px}
+  .progress-label{font-size:12.5px;color:var(--ink-soft);margin-bottom:5px;display:flex;justify-content:space-between}
+  .progress-label b{color:var(--amber-dark);font-weight:700}
+  .bar{height:7px;background:#e6ded2;border-radius:99px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),#c99a58);border-radius:99px;transition:width .28s ease}
+  .filters{display:flex;gap:6px}
+  .filters button{
+    border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);
+    font:inherit;font-size:13px;padding:6px 13px;border-radius:99px;cursor:pointer;
+    transition:.15s;white-space:nowrap;
+  }
+  .filters button:hover{border-color:var(--amber);color:var(--amber-dark)}
+  .filters button.on{background:var(--amber);border-color:var(--amber);color:#fff;font-weight:600}
+  .save-hint{font-size:12px;color:var(--green);min-width:64px;text-align:right;opacity:0;transition:opacity .3s}
+  .save-hint.show{opacity:1}
+
+  /* ---------- sections ---------- */
+  section{margin-bottom:34px}
+  .sec-head{
+    display:flex;align-items:baseline;gap:12px;
+    padding-bottom:9px;margin-bottom:16px;
+    border-bottom:2px solid var(--amber-soft);
+  }
+  .sec-num{
+    font-size:12px;font-weight:700;color:#fff;background:var(--amber);
+    width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;
+    flex:none;align-self:center;
+  }
+  .sec-head h2{margin:0;font-size:19px;font-weight:700;letter-spacing:.02em}
+  .sec-note{font-size:12.5px;color:var(--ink-soft);margin-left:auto;text-align:right}
+
+  /* ---------- question card ---------- */
+  .q{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:3px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px 14px;
+    margin-bottom:12px;
+    transition:border-color .18s, box-shadow .18s;
+  }
+  .q:focus-within{border-color:var(--amber);border-left-color:var(--amber);box-shadow:0 2px 14px rgba(168,118,60,.1)}
+  .q.done{border-left-color:var(--green)}
+  .q-top{display:flex;gap:11px;align-items:flex-start}
+  .q-no{
+    font-size:12px;font-weight:700;color:var(--amber-dark);background:var(--amber-soft);
+    padding:2px 8px;border-radius:5px;flex:none;margin-top:3px;font-variant-numeric:tabular-nums;
+  }
+  .q-text{font-size:15.5px;font-weight:600;flex:1}
+  .flag{
+    font-size:11px;font-weight:700;color:#fff;background:var(--red);
+    padding:2px 7px;border-radius:4px;flex:none;margin-top:3px;letter-spacing:.05em;
+  }
+  .hint{
+    font-size:13px;color:var(--ink-soft);
+    margin:8px 0 10px 0;padding-left:11px;
+    border-left:2px solid var(--amber-soft);
+  }
+  .hint b{color:var(--amber-dark)}
+  textarea{
+    width:100%;min-height:76px;resize:vertical;
+    border:1px solid var(--line);border-radius:7px;
+    padding:10px 12px;font:inherit;font-size:14.5px;line-height:1.65;
+    color:var(--ink);background:#fff;
+  }
+  textarea:focus{outline:none;border-color:var(--amber);background:#fffdf8}
+  textarea::placeholder{color:#b8ab9c}
+
+  /* ---------- footer actions ---------- */
+  .actions{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(255,253,250,.96);
+    backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);
+    padding:12px 20px;
+  }
+  .actions-inner{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+  .btn{
+    border:1px solid var(--line);background:#fff;color:var(--ink);
+    font:inherit;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:7px;cursor:pointer;transition:.15s;
+  }
+  .btn:hover{border-color:var(--amber);color:var(--amber-dark)}
+  .btn.primary{background:var(--amber);border-color:var(--amber);color:#fff}
+  .btn.primary:hover{background:var(--amber-dark);border-color:var(--amber-dark);color:#fff}
+  .btn.ghost{color:var(--ink-soft);font-weight:500}
+  .btn.danger:hover{border-color:var(--red);color:var(--red)}
+  .spacer{flex:1}
+  #fileIn{display:none}
+
+  .tip{
+    background:#fff8ec;border:1px solid #ecd9b8;border-radius:9px;
+    padding:14px 17px;margin-bottom:24px;font-size:13.5px;color:#6d5837;
+  }
+  .tip b{color:var(--amber-dark)}
+  .empty{text-align:center;color:var(--ink-soft);padding:40px 0;font-size:14px;display:none}
+
+  /* ---------- custom question ---------- */
+  .q.custom{border-left-color:#8a6fb0;background:#fdfbff}
+  .q.custom.done{border-left-color:var(--green)}
+  .tag-new{
+    font-size:11px;font-weight:700;color:#fff;background:#8a6fb0;
+    padding:2px 7px;border-radius:4px;flex:none;margin-top:3px;letter-spacing:.05em;
+  }
+  .del{
+    border:none;background:none;color:#b9ada0;cursor:pointer;font-size:17px;
+    line-height:1;padding:2px 4px;flex:none;margin-top:2px;border-radius:4px;
+  }
+  .del:hover{color:var(--red);background:#fbeeea}
+
+  /* ---------- add-question modal ---------- */
+  .mask{
+    position:fixed;inset:0;background:rgba(42,35,28,.45);z-index:60;
+    display:none;align-items:center;justify-content:center;padding:20px;
+  }
+  .mask.open{display:flex}
+  .modal{
+    background:var(--paper);border-radius:13px;width:100%;max-width:520px;
+    padding:24px 26px;box-shadow:0 20px 60px rgba(0,0,0,.28);max-height:90vh;overflow:auto;
+  }
+  .modal h3{margin:0 0 4px;font-size:18px}
+  .modal .sub{margin:0 0 18px;font-size:13px;color:var(--ink-soft)}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+  .field select,.field input[type=text],.field textarea{
+    width:100%;border:1px solid var(--line);border-radius:7px;padding:9px 11px;
+    font:inherit;font-size:14px;color:var(--ink);background:#fff;
+  }
+  .field select:focus,.field input:focus,.field textarea:focus{outline:none;border-color:var(--amber)}
+  .field textarea{min-height:70px;resize:vertical}
+  .check{display:flex;align-items:center;gap:8px;font-size:13.5px;cursor:pointer}
+  .check input{width:16px;height:16px;accent-color:var(--amber);cursor:pointer}
+  .modal-foot{display:flex;gap:9px;justify-content:flex-end;margin-top:20px}
+
+  @media (max-width:640px){
+    h1{font-size:22px}
+    .sec-note{display:none}
+    .actions-inner{gap:7px}
+    .btn{padding:8px 12px;font-size:12.5px}
+  }
+  @media print{
+    header{background:#fff;color:#000;border-bottom:2px solid #000}
+    header .brand,header p,.meta-line{color:#444}
+    .toolbar,.actions,.filters,.tip{display:none!important}
+    .q{break-inside:avoid;page-break-inside:avoid;border:1px solid #ccc}
+    textarea{min-height:64px}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="brand">HONG CHUAN · 弘川藏酒閣</div>
+    <h1>加盟常見問題　品牌方回答蒐集表</h1>
+    <p>本表為「反向模擬」——站在準加盟主的角度，列出他們在簽約前一定會問、也一定會拿去比較的問題。請品牌方逐題填寫真實答案，之後將整理為業務現場的標準參考內容。</p>
+    <div class="meta-line">
+      <span>前提條件：加盟金 <b>66 萬</b>（含教育訓練＋品牌授權）</span>
+      <span>裝潢 <b>另計</b>，依組裝內容浮動</span>
+      <span>共 <b id="totalTop">—</b> 題</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="progress-box">
+        <div class="progress-label"><span>填答進度</span><span><b id="doneN">0</b> / <span id="totalN">0</span></span></div>
+        <div class="bar"><i id="barFill"></i></div>
+      </div>
+      <div class="filters">
+        <button class="on" data-f="all">全部</button>
+        <button data-f="todo">未填</button>
+        <button data-f="done">已填</button>
+      </div>
+      <div class="save-hint" id="saveHint">已儲存</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <b>填寫建議：</b>能給數字就給數字，給不出數字的請寫「目前無法提供的原因」——業務現場最怕的不是答案不好聽，而是含糊。標記 <span class="flag" style="display:inline-block;margin:0 2px">關鍵</span> 的題目是最容易讓客戶當場退卻的地雷題，請優先處理。<br>
+    想到清單上沒有的問題，請按下方<b>「＋ 新增問題」</b>，並選擇要歸到哪一個分類。<br>
+    答案會自動存在這台電腦的瀏覽器裡，關掉再打開仍在。填完請按下方<b>「匯出答案（文字檔）」</b>回傳。
+  </div>
+
+  <div id="list"></div>
+  <div class="empty" id="empty">這個篩選條件下沒有題目。</div>
+
+</div>
+
+<div class="actions">
+  <div class="actions-inner">
+    <button class="btn primary" id="addBtn">＋ 新增問題</button>
+    <button class="btn" id="expMd">匯出答案（文字檔）</button>
+    <button class="btn" id="expJson">存檔（JSON）</button>
+    <button class="btn" id="impBtn">載入存檔</button>
+    <input type="file" id="fileIn" accept=".json,application/json">
+    <button class="btn ghost" id="printBtn">列印 / 存 PDF</button>
+    <span class="spacer"></span>
+    <button class="btn ghost danger" id="clearBtn">清空全部</button>
+  </div>
+</div>
+
+<div class="mask" id="mask">
+  <div class="modal">
+    <h3>新增問題</h3>
+    <p class="sub">加盟主現場問到、但清單上沒有的問題，補進來一起收集答案。</p>
+    <div class="field">
+      <label for="mSec">要歸到哪一個分類？</label>
+      <select id="mSec"></select>
+    </div>
+    <div class="field">
+      <label for="mQ">問題內容</label>
+      <textarea id="mQ" placeholder="例如：可不可以先做小型店試水溫，之後再擴大？"></textarea>
+    </div>
+    <div class="field">
+      <label for="mH">回答時建議包含（選填）</label>
+      <input type="text" id="mH" placeholder="例如：說明是否有小坪數方案與升級路徑">
+    </div>
+    <div class="field">
+      <label class="check"><input type="checkbox" id="mFlag"> 標記為「關鍵題」（容易談崩、需優先準備）</label>
+    </div>
+    <div class="modal-foot">
+      <button class="btn ghost" id="mCancel">取消</button>
+      <button class="btn primary" id="mSave">新增</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = [
+  {
+    t:"加盟金相關",
+    note:"客戶第一個念頭：這筆錢買到什麼",
+    qs:[
+      {q:"這 66 萬的細項怎麼拆？教育訓練佔多少、品牌授權佔多少？有沒有書面明細可以看？", h:"最好能列出一張表：訓練 X 萬、授權 X 萬、開辦行政 X 萬……加總 66 萬。", flag:1},
+      {q:"品牌授權是幾年？到期要不要再付一次？續約金多少？", h:"寫明年限與續約條件（免費續約／打折／重新收費）。"},
+      {q:"教育訓練是幾天、幾人、在哪裡上課？含不含住宿交通？多帶一位店長要不要加錢？", h:"天數、地點、名額上限、課表大綱。"},
+      {q:"訓練結束後的後續支援呢？複訓、新品訓練、線上教材是否另外收費？", h:"說明是一次性還是持續性支援。"},
+      {q:"66 萬裡面有沒有含首批進貨、招牌、POS 系統、生財器具？", h:"請直接條列「含什麼」與「不含什麼」。不含的部分講清楚，反而比較有說服力。", flag:1},
+      {q:"如果最後沒開成（找不到店面、租約談不攏、菸酒執照沒下來），66 萬退不退？退多少？截止時間點是什麼時候？", h:"退費級距與時間點，越明確越能降低客戶下訂的心理門檻。", flag:1},
+      {q:"為什麼是 66 萬？同業有的只要 20–30 萬甚至零加盟金，我多付的差額換到什麼？", h:"這題是價值論述題，建議寫 3 個「別人給不了」的具體項目（例如原廠簽約、配額、選品能力）。", flag:1}
+    ]
+  },
+  {
+    t:"裝潢另計的相關疑慮",
+    note:"金額不透明 = 最大信任破口",
+    qs:[
+      {q:"「會根據組裝內容不同」——最低配到最高配的實際區間是多少？能不能給 A／B／C 三個級距的數字？", h:"例如：基礎型 XX 萬（X 坪）／標準型 XX 萬／旗艦型 XX 萬。沒有數字，這場銷售通常就停在這裡。", flag:1},
+      {q:"有沒有已開幕門市的實際裝潢報價單可以參考？坪數怎麼對應費用（每坪大約多少）？", h:"提供 1–2 家實例（可隱去店名）。"},
+      {q:"一定要用總部指定的工班與設備商嗎？我自己找認識的統包可不可以？", h:"若必須指定，說明理由（品牌一致性／保固／驗收標準）。"},
+      {q:"如果必須用指定廠商，總部有沒有從中抽成或賺價差？", h:"客戶不一定敢直接問，但一定會想。建議主動說明，坦白反而加分。", flag:1},
+      {q:"恆溫酒櫃、雪茄保濕櫃、冷藏設備是買斷還是租賃？保固多久？故障誰負責？", h:"列出主要設備清單、單價區間、保固年限與維修窗口。"},
+      {q:"哪些是「品牌形象必要項目」（招牌、燈光、主視覺牆），哪些是我可以自己決定省錢的？", h:"畫出必要／彈性的界線，讓客戶感覺有控制權。"},
+      {q:"既有店面轉加盟、或原本就是酒行想改招牌，可以沿用原有裝潢嗎？費用怎麼折算？", h:"轉加盟方案通常是重要的成交切入點，建議寫清楚。"},
+      {q:"合約到期或不續約時，裝潢與設備歸誰？要不要拆招牌、恢復原狀？費用由誰負擔？", h:"退場條件寫清楚，客戶才敢進場。"}
+    ]
+  },
+  {
+    t:"總投資金額與回本",
+    note:"客戶回家一定會用計算機算一遍",
+    qs:[
+      {q:"含加盟金＋裝潢＋租金押金＋首批酒＋周轉金，開一家店的完整總額大約多少？", h:"給一個全含的區間（例如 XXX ～ XXX 萬），並附上組成明細。", flag:1},
+      {q:"首批進貨要壓多少錢？酒類單價高，庫存等於現金卡住——有沒有寄售、鋪貨、月結或退換貨機制？", h:"這是酒品零售最痛的點，若有付款條件優惠請務必寫出來。", flag:1},
+      {q:"現有加盟店的平均月營業額、毛利率、淨利率各是多少？最好的和最差的分別是多少？", h:"能給區間就給區間。只講平均值、不講最差值，客戶會自行往壞處想。", flag:1},
+      {q:"回本期抓多久？這個數字是根據幾家店的實際數據算出來的？", h:"標明樣本數與統計期間，數字才站得住。"},
+      {q:"開幕前三個月我要準備多少周轉金才不會斷氣？", h:"建議給一個具體的最低現金水位建議。"}
+    ]
+  },
+  {
+    t:"獲利模式與貨源",
+    note:"弘川最強的資產在這一區",
+    qs:[
+      {q:"弘川與帝亞吉歐、保樂利加、格蘭父子、寰盛艾丁頓、酩悅軒尼詩等原廠的簽約，讓加盟主的進價真的比市場行情低嗎？大約低多少？可以看實際價目表嗎？", h:"這是 66 萬最有力的支撐點，建議用 2–3 支熱門酒款的實際價差舉例。", flag:1},
+      {q:"熱門稀缺品項（山崎、響、麥卡倫、百富）的配額怎麼分配？直營店會不會優先拿？", h:"說明分配原則，避免客戶擔心「好貨都被總部吃掉」。"},
+      {q:"我可以自己找其他管道進貨嗎？還是所有品項都必須向總部叫貨？", h:"寫明強制品項與自由品項的比例或範圍。"},
+      {q:"除了洋酒，菸品、雪茄、啤酒、葡萄酒、周邊配件的毛利結構分別是什麼？哪一塊才是真正賺錢的？", h:"用毛利率把「賺錢引擎」講清楚，這是專業度的展現。"},
+      {q:"叫貨價會不會浮動？原廠漲價時我能不能反映到售價？售價是我決定還是總部決定？", h:"說明定價權歸屬與調價機制。"}
+    ]
+  },
+  {
+    t:"持續性費用",
+    note:"客戶最怕的是「之後還有沒有錢要付」",
+    qs:[
+      {q:"每月權利金／管理費怎麼收？固定金額還是抽營業額百分比？", h:"金額或％數，以及起算時間點。"},
+      {q:"要不要分攤廣告行銷基金？攤多少、怎麼使用、看不看得到成效報告？", h:"若有，說明用途與回饋方式。"},
+      {q:"POS／進銷存系統費、年度訓練費、保證金——還有哪些每年會再出現的費用？", h:"請一次列完所有經常性支出，避免日後爭議。", flag:1},
+      {q:"保證金要多少？什麼情況會被扣？退場時多久退還？", h:"金額、扣款條件、退還時程。"}
+    ]
+  },
+  {
+    t:"商圈保障與市場競爭",
+    note:"決定客戶敢不敢投第二家",
+    qs:[
+      {q:"有沒有商圈保障？半徑幾公里內不再開第二家？這個限制包含直營店嗎？", h:"寫明保障範圍與是否含直營、含電商。", flag:1},
+      {q:"選址是總部評估還是我自己找？會不會給我書面評估報告？如果評估錯了誰負責？", h:"說明選址流程與總部承擔的角色。"},
+      {q:"隔壁就有量販、Costco、電商在殺價，我的價格打得贏嗎？品牌能給我什麼「非價格」的競爭力？", h:"建議從選品、稀有品項、專業服務、雪茄與客製化服務等角度回答。", flag:1},
+      {q:"總部有沒有自營的電商或直營門市？會不會跟加盟店搶同一批客人？", h:"若有，說明線上線下的分工與利益分配。"}
+    ]
+  },
+  {
+    t:"合約條款與退場機制",
+    note:"客戶會拿去給律師或家人看",
+    qs:[
+      {q:"合約年限幾年？中途想結束怎麼辦？違約金怎麼計算？", h:"年限、提前終止條件、違約金公式。"},
+      {q:"經營不善想把店轉讓給別人，總部同意嗎？要不要再收一次加盟金？", h:"轉讓流程與費用。"},
+      {q:"總部可以單方面終止合約的條件有哪些？", h:"逐條列出，避免客戶產生「被養套殺」的疑慮。"},
+      {q:"品牌如果出事（食安、稅務、負面新聞），我的損失由誰承擔？", h:"說明品牌方的責任範圍與危機處理機制。"},
+      {q:"我可以先跟現有的加盟主聊聊嗎？能不能給我 2～3 家的聯絡方式？", h:"敢不敢開放，本身就是最強的信任訊號。建議事先徵得 2–3 位配合的加盟主同意。", flag:1}
+    ]
+  },
+  {
+    t:"經營現實面",
+    note:"專業門檻高，這區決定客戶敢不敢下手",
+    qs:[
+      {q:"目前總共幾家店？開了幾年？這幾年收掉幾家？收掉的原因是什麼？", h:"存活率與收店原因，坦白說明反而能建立可信度。", flag:1},
+      {q:"菸酒零售業許可執照、營業登記由誰處理？大約多久核發？沒過怎麼辦？", h:"流程、時程、總部協助範圍。"},
+      {q:"我需要親自顧店嗎？可不可以純投資找店長經營？總部支不支援徵人與店長培訓？", h:"說明是否接受純投資型加盟。"},
+      {q:"開幕後總部多久來輔導一次？督導具體做什麼？出狀況時多快有人回應？", h:"寫明巡店頻率與聯絡窗口。"},
+      {q:"酒品專業門檻高（威士忌、葡萄酒、雪茄），我沒有背景做得起來嗎？客人問我我答不出來怎麼辦？", h:"可帶出教育訓練體系、考題制度、線上查詢工具等具體做法。", flag:1}
+    ]
+  }
+];
+
+const KEY  = "hongchuan_franchise_faq_v1";
+const CKEY = "hongchuan_franchise_faq_custom_v1";
+
+let answers = {}, custom = [];
+try { answers = JSON.parse(localStorage.getItem(KEY)  || "{}"); } catch(e) { answers = {}; }
+try { custom  = JSON.parse(localStorage.getItem(CKEY) || "[]"); } catch(e) { custom  = []; }
+if (!Array.isArray(custom)) custom = [];
+
+const listEl  = document.getElementById("list");
+const emptyEl = document.getElementById("empty");
+let index = [], n = 0, filter = "all";
+
+function esc(s){
+  return String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+}
+
+/* ---------- render ---------- */
+function render(){
+  listEl.innerHTML = "";
+  index = []; n = 0;
+
+  DATA.forEach((sec, si) => {
+    const s = document.createElement("section");
+    s.innerHTML = '<div class="sec-head">' +
+      '<span class="sec-num">' + (si+1) + '</span>' +
+      '<h2>' + esc(sec.t) + '</h2>' +
+      '<span class="sec-note">' + esc(sec.note) + '</span></div>';
+
+    const items = sec.qs.map(o => Object.assign({}, o, { base:true }))
+      .concat(custom.filter(c => c.sec === si));
+
+    items.forEach(item => {
+      n++;
+      const id = item.base ? ("q" + n + "_" + si) : item.id;
+      const card = document.createElement("div");
+      card.className = "q" + (item.base ? "" : " custom");
+      card.innerHTML =
+        '<div class="q-top">' +
+          '<span class="q-no">' + String(n).padStart(2,"0") + '</span>' +
+          '<span class="q-text">' + esc(item.q) + '</span>' +
+          (item.flag ? '<span class="flag">關鍵</span>' : '') +
+          (item.base ? '' : '<span class="tag-new">新增</span><button class="del" title="刪除這一題">&times;</button>') +
+        '</div>' +
+        (item.h ? '<div class="hint"><b>回答時建議包含：</b>' + esc(item.h) + '</div>' : '') +
+        '<textarea placeholder="請在此填寫答案…"></textarea>';
+
+      const ta = card.querySelector("textarea");
+      ta.value = answers[id] || "";
+      if (ta.value.trim()) card.classList.add("done");
+      ta.addEventListener("input", () => {
+        answers[id] = ta.value;
+        card.classList.toggle("done", !!ta.value.trim());
+        save(); refresh();
+      });
+
+      const del = card.querySelector(".del");
+      if (del) del.addEventListener("click", () => {
+        if (!confirm("確定刪除這一題？已填的答案也會一併移除。")) return;
+        custom = custom.filter(c => c.id !== item.id);
+        delete answers[item.id];
+        save(); render();
+      });
+
+      s.appendChild(card);
+      index.push({ id, sec:sec.t, q:item.q, flag:!!item.flag, base:!!item.base, el:card });
+    });
+
+    listEl.appendChild(s);
+  });
+
+  document.getElementById("totalN").textContent   = n;
+  document.getElementById("totalTop").textContent = n;
+  refresh();
+  applyFilter();
+}
+
+/* ---------- id migration (舊版存檔相容) ---------- */
+(function migrate(){
+  let k = 0, changed = false;
+  DATA.forEach((sec, si) => sec.qs.forEach(() => {
+    k++;
+    const oldId = "q" + k, newId = "q" + k + "_" + si;
+    if (answers[oldId] !== undefined && answers[newId] === undefined) {
+      answers[newId] = answers[oldId];
+      delete answers[oldId];
+      changed = true;
+    }
+  }));
+  if (changed) { try { localStorage.setItem(KEY, JSON.stringify(answers)); } catch(e){} }
+})();
+
+/* ---------- save / progress / filter ---------- */
+let hintTimer;
+function save(){
+  try {
+    localStorage.setItem(KEY,  JSON.stringify(answers));
+    localStorage.setItem(CKEY, JSON.stringify(custom));
+  } catch(e){}
+  const h = document.getElementById("saveHint");
+  h.classList.add("show");
+  clearTimeout(hintTimer);
+  hintTimer = setTimeout(() => h.classList.remove("show"), 1200);
+}
+
+function refresh(){
+  const done = index.filter(x => (answers[x.id]||"").trim()).length;
+  document.getElementById("doneN").textContent = done;
+  document.getElementById("barFill").style.width = (n ? done / n * 100 : 0) + "%";
+}
+
+document.querySelectorAll(".filters button").forEach(b => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll(".filters button").forEach(x => x.classList.remove("on"));
+    b.classList.add("on");
+    filter = b.dataset.f;
+    applyFilter();
+  });
+});
+
+function applyFilter(){
+  let shown = 0;
+  index.forEach(x => {
+    const has = !!(answers[x.id]||"").trim();
+    const ok = filter === "all" || (filter === "done" && has) || (filter === "todo" && !has);
+    x.el.style.display = ok ? "" : "none";
+    if (ok) shown++;
+  });
+  document.querySelectorAll("section").forEach(s => {
+    const any = [...s.querySelectorAll(".q")].some(c => c.style.display !== "none");
+    s.style.display = any ? "" : "none";
+  });
+  emptyEl.style.display = shown ? "none" : "block";
+}
+
+/* ---------- add question ---------- */
+const mask = document.getElementById("mask");
+const mSec = document.getElementById("mSec");
+DATA.forEach((s, i) => {
+  const o = document.createElement("option");
+  o.value = i;
+  o.textContent = (i+1) + "、" + s.t;
+  mSec.appendChild(o);
+});
+
+function openModal(){
+  document.getElementById("mQ").value = "";
+  document.getElementById("mH").value = "";
+  document.getElementById("mFlag").checked = false;
+  mask.classList.add("open");
+  setTimeout(() => document.getElementById("mQ").focus(), 30);
+}
+function closeModal(){ mask.classList.remove("open"); }
+
+document.getElementById("addBtn").addEventListener("click", openModal);
+document.getElementById("mCancel").addEventListener("click", closeModal);
+mask.addEventListener("click", e => { if (e.target === mask) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+
+document.getElementById("mSave").addEventListener("click", () => {
+  const q = document.getElementById("mQ").value.trim();
+  if (!q) { alert("請先輸入問題內容。"); document.getElementById("mQ").focus(); return; }
+  const item = {
+    id:   "c" + Date.now() + Math.floor(Math.random()*1000),
+    sec:  parseInt(mSec.value, 10),
+    q:    q,
+    h:    document.getElementById("mH").value.trim(),
+    flag: document.getElementById("mFlag").checked
+  };
+  custom.push(item);
+  save(); closeModal(); render();
+  const card = index.find(x => x.id === item.id);
+  if (card) {
+    card.el.scrollIntoView({ behavior:"smooth", block:"center" });
+    card.el.querySelector("textarea").focus();
+  }
+});
+
+function stamp(){
+  const d = new Date();
+  const p = v => String(v).padStart(2,"0");
+  return d.getFullYear() + p(d.getMonth()+1) + p(d.getDate()) + "-" + p(d.getHours()) + p(d.getMinutes());
+}
+
+function download(name, text, type){
+  const blob = new Blob(["﻿" + text], { type: type + ";charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+}
+
+document.getElementById("expMd").addEventListener("click", () => {
+  const done = index.filter(x => (answers[x.id]||"").trim()).length;
+  let out = "# 弘川藏酒閣｜加盟常見問題 品牌方回覆\n\n";
+  out += "前提：加盟金 66 萬（含教育訓練＋品牌授權），裝潢另計。\n";
+  out += "填答進度：" + done + " / " + n + "　匯出時間：" + new Date().toLocaleString("zh-TW") + "\n\n---\n";
+  let cur = "", i = 0;
+  index.forEach(x => {
+    if (x.sec !== cur) { cur = x.sec; out += "\n## " + cur + "\n"; }
+    i++;
+    const a = (answers[x.id]||"").trim();
+    out += "\n**" + String(i).padStart(2,"0") + ". " + x.q + "**" +
+           (x.flag ? "　［關鍵題］" : "") + (x.base ? "" : "　［新增題］") + "\n";
+    out += a ? (a + "\n") : "（未填）\n";
+  });
+  download("弘川加盟問答-品牌方回覆-" + stamp() + ".md", out, "text/markdown");
+});
+
+document.getElementById("expJson").addEventListener("click", () => {
+  const payload = { v:2, answers:answers, custom:custom, saved:new Date().toISOString() };
+  download("弘川加盟問答-存檔-" + stamp() + ".json", JSON.stringify(payload, null, 2), "application/json");
+});
+
+document.getElementById("impBtn").addEventListener("click", () => document.getElementById("fileIn").click());
+document.getElementById("fileIn").addEventListener("change", e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const obj = JSON.parse(r.result);
+      if (typeof obj !== "object" || obj === null) throw 0;
+      if (obj.answers) {                       // v2 格式
+        answers = obj.answers;
+        custom  = Array.isArray(obj.custom) ? obj.custom : [];
+      } else {                                  // v1 舊格式（只有答案）
+        answers = obj;
+      }
+      save(); render();
+      alert("存檔已載入。");
+    } catch(err) { alert("檔案格式不正確，請確認是本頁匯出的 JSON 存檔。"); }
+  };
+  r.readAsText(f);
+  e.target.value = "";
+});
+
+document.getElementById("printBtn").addEventListener("click", () => window.print());
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!confirm("確定要清空全部答案與新增的題目嗎？此動作無法復原，建議先按「存檔（JSON）」備份。")) return;
+  answers = {}; custom = [];
+  try { localStorage.removeItem(KEY); localStorage.removeItem(CKEY); } catch(e){}
+  render();
+});
+
+render();
+</script>
+</body>
+</html>
