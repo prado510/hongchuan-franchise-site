@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弘川藏酒閣｜品牌故事介紹</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0d0b09; --card:#141110; --card2:#191512; --line:#262119; --line2:#2b2621;
+    --gold:#b08d4f; --gold2:#d4b06a; --gold3:#e8c583; --cream:#efe8dd;
+    --mute:#8c8378; --mute2:#a89b8a; --dim:#5f574d;
+    --red:#e8735a; --green:#a9d693;
+  }
+  body{font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
+       background:var(--bg);color:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+
+  /* HEADER */
+  header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#151210,#0d0b09);
+         padding:34px 22px 0}
+  .hin{max-width:1000px;margin:0 auto}
+  .brandline{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:5px}
+  .bname{font-size:26px;font-weight:800;letter-spacing:.04em}
+  .btag{font-size:12px;letter-spacing:.28em;color:var(--gold)}
+  .hsub{font-size:13.5px;color:var(--mute);margin-bottom:22px}
+  .hsub b{color:var(--gold2);font-weight:600}
+
+  /* TABS */
+  nav.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+  nav.tabs::-webkit-scrollbar{display:none}
+  .tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--mute);
+       font-family:inherit;font-size:14px;padding:12px 16px;cursor:pointer;white-space:nowrap;
+       transition:.15s;letter-spacing:.02em}
+  .tab:hover{color:var(--cream)}
+  .tab.on{color:var(--gold3);border-bottom-color:var(--gold);font-weight:700}
+  .tab .n{font-size:10.5px;color:var(--dim);margin-right:5px;font-weight:700}
+  .tab.on .n{color:var(--gold)}
+
+  /* MAIN */
+  main{max-width:1000px;margin:0 auto;padding:38px 22px 90px}
+  section{display:none;animation:fade .3s ease}
+  section.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  .kick{font-size:11.5px;letter-spacing:.3em;color:var(--gold);margin-bottom:9px}
+  h1{font-size:30px;font-weight:800;letter-spacing:.01em;margin-bottom:9px;line-height:1.35}
+  .lead{font-size:15px;color:var(--mute2);margin-bottom:34px;max-width:720px}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:26px 28px;margin-bottom:22px}
+  .card.gold{border-color:#4a3d28;background:linear-gradient(160deg,#1a1510,#100e0c)}
+  .ct{font-size:11.5px;letter-spacing:.2em;color:var(--gold);margin-bottom:7px}
+  h2{font-size:20px;font-weight:700;margin-bottom:5px;line-height:1.45}
+  h3{font-size:16px;font-weight:700;margin:22px 0 10px;color:var(--gold3)}
+  .desc{font-size:13.5px;color:var(--mute);margin-bottom:20px}
+  p{font-size:15px;color:#cfc5b6;margin-bottom:14px}
+  p:last-child{margin-bottom:0}
+  b{color:var(--gold3);font-weight:700}
+  .src{font-size:10.5px;color:var(--dim);letter-spacing:0;display:block;margin-top:5px;line-height:1.75}
+  sup{font-size:9px;color:var(--gold);font-weight:700;vertical-align:super}
+
+  /* 三段結構 */
+  .flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:6px 0 4px}
+  @media(max-width:800px){.flow{grid-template-columns:1fr}}
+  .fstep{background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:22px;position:relative}
+  .fstep .fn{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold2);
+             font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .fstep h4{font-size:16px;margin-bottom:8px}
+  .fstep p{font-size:13.5px;color:var(--mute2);margin:0}
+
+  /* 三句大綱 */
+  .three{counter-reset:t}
+  .tline{border-left:2px solid var(--line2);padding:0 0 26px 26px;position:relative}
+  .tline:last-child{padding-bottom:6px}
+  .tline .dot{position:absolute;left:-9px;top:3px;width:16px;height:16px;border-radius:50%;
+              background:var(--bg);border:2px solid var(--gold)}
+  .tline.hi .dot{background:var(--gold)}
+  .tlab{font-size:11.5px;letter-spacing:.2em;color:var(--gold);margin-bottom:5px}
+  .tmain{font-size:21px;font-weight:700;margin-bottom:8px;line-height:1.5}
+  .tsub{font-size:14px;color:var(--mute2)}
+
+  /* 表格 */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{text-align:left;font-size:11px;letter-spacing:.1em;color:var(--dim);font-weight:600;
+     padding:0 12px 10px 0;border-bottom:1px solid var(--line2)}
+  td{padding:14px 12px 14px 0;border-bottom:1px solid #1e1a16;vertical-align:top;color:#c4b8a6}
+  tr:last-child td{border-bottom:none}
+  td.b{color:var(--cream);font-weight:700;font-size:14.5px;white-space:nowrap}
+  .tag{display:inline-block;background:#2a1f14;border:1px solid #4a3823;color:var(--gold2);
+       font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap}
+
+  /* 四大情境 */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.grid2{grid-template-columns:1fr}}
+  .cat{background:var(--card2);border:1px solid var(--line2);border-radius:12px;padding:22px;position:relative;overflow:hidden}
+  .cat.hi{border-color:#5c4823;background:linear-gradient(165deg,#1f1810,#151210)}
+  .cat.hi::after{content:"客單價最高";position:absolute;top:14px;right:-32px;background:var(--gold);
+                 color:#12100d;font-size:10.5px;font-weight:800;letter-spacing:.06em;padding:4px 36px;transform:rotate(38deg)}
+  .cno{font-size:10.5px;letter-spacing:.24em;color:#7d6435;margin-bottom:5px}
+  .cnm{font-size:18px;font-weight:700;margin-bottom:3px}
+  .cat.hi .cnm{color:var(--gold3)}
+  .cnt{font-size:12px;color:var(--mute);margin-bottom:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:#1c1815;border:1px solid #2e2820;border-radius:20px;padding:5px 12px;
+        font-size:12px;color:#c4b8a6}
+  .cat.hi .chip{background:#231b12;border-color:#3f3423;color:#d9c9ab}
+
+  /* 條圖 */
+  .brow{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+  .blb{width:118px;font-size:12.5px;color:var(--mute2);text-align:right;flex-shrink:0}
+  .btr{flex:1;height:30px;background:#191512;border-radius:4px;overflow:hidden}
+  .bf{height:100%;display:flex;align-items:center;padding-left:11px;font-size:12px;font-weight:700}
+  .f1{background:linear-gradient(90deg,#3a3128,#5c4f3d);color:#c7b9a4}
+  .f2{background:linear-gradient(90deg,#5a4728,#8a6c3c);color:#f0e4cd}
+  .f3{background:linear-gradient(90deg,#8a6c2f,#d4b06a);color:#12100d}
+  .f4{background:linear-gradient(90deg,#4a5c3a,#7d9a5c);color:#12100d}
+  .fpeak{background:linear-gradient(90deg,#8a6c2f,#d4b06a);color:#12100d}
+  .fnorm{background:linear-gradient(90deg,#6e5629,#b08d4f);color:#12100d}
+  .fest{background:linear-gradient(90deg,#3d352a,#5f5342);color:var(--mute2)}
+  .fup{background:linear-gradient(90deg,#8a6c2f,#c9a45c);color:#12100d}
+  .fdn{background:#332c25;color:#9c8f7d}
+
+  /* stat */
+  .stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+  .stat{background:var(--card2);border:1px solid var(--line2);border-radius:10px;padding:15px 18px;flex:1;min-width:150px}
+  .num{font-size:25px;font-weight:800;color:var(--cream);letter-spacing:-.01em;line-height:1.2}
+  .num small{font-size:13px;font-weight:500;color:var(--mute2);margin-left:2px}
+  .lbl{font-size:11.5px;color:var(--mute);margin-top:5px;line-height:1.6}
+
+  .drops{display:flex;gap:12px;flex-wrap:wrap}
+  .drop{flex:1;min-width:170px;background:#1a1210;border:1px solid #4a2b22;border-radius:10px;padding:16px 18px}
+  .dnum{font-size:29px;font-weight:800;color:var(--red);letter-spacing:-.02em}
+  .dlbl{font-size:12px;color:var(--mute2);margin-top:4px;line-height:1.6}
+
+  /* note box */
+  .note{border-left:3px solid var(--line2);border-radius:0 8px 8px 0;padding:13px 17px;margin-top:16px;
+        font-size:13.5px;background:#141110;color:var(--mute2)}
+  .note.warn{border-left-color:var(--red);background:#1c1310;color:#d5bfae}
+  .note.warn b{color:#f0a58e}
+  .note.good{border-left-color:#6d9a5a;background:#131a13;color:#c3cfba}
+  .note.good b{color:var(--green)}
+  .note.gold{border-left-color:var(--gold);background:#1a1510}
+
+  /* 雙軌 */
+  .dual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.dual{grid-template-columns:1fr}}
+  .lane{background:var(--card2);border:1px solid var(--line2);border-radius:10px;padding:20px}
+  .lane.up{border-color:#5c4823;background:linear-gradient(160deg,#1f1810,#151210)}
+  .ln{font-size:11px;letter-spacing:.18em;color:#7d6435;margin-bottom:7px}
+  .lt{font-size:16px;font-weight:700;margin-bottom:9px}
+  .lane.up .lt{color:var(--gold3)}
+  .lane p{font-size:13px;color:var(--mute2);margin:0}
+
+  /* 大數字 */
+  .bignum{text-align:center;padding:14px 0 6px}
+  .bignum .v{font-size:66px;font-weight:800;color:var(--red);line-height:1;letter-spacing:-.03em}
+  .bignum .k{font-size:13px;color:var(--mute2);margin-top:10px}
+
+  /* 問題清單 */
+  .q{display:flex;gap:15px;padding:19px 0;border-bottom:1px solid #1e1a16;align-items:flex-start}
+  .q:last-child{border-bottom:none}
+  .qn{width:29px;height:29px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold2);
+      font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .qb{flex:1}
+  .qt{font-size:16.5px;font-weight:700;margin-bottom:6px;color:var(--cream)}
+  .qd{font-size:13.5px;color:var(--mute2)}
+  .qd em{color:var(--gold2);font-style:normal}
+
+  .punch{font-size:22px;font-weight:700;color:#f0d9a8;line-height:1.55;
+         border-top:1px solid #3a3025;padding-top:18px;margin-top:18px}
+  .punch span{color:#fff}
+
+  /* refs */
+  .refs{margin-top:16px;padding-top:16px;border-top:1px solid #241f19;font-size:11.5px;color:var(--dim);line-height:1.95}
+  .refs b{color:var(--mute);display:block;margin-bottom:7px;font-size:11.5px;letter-spacing:.1em}
+  .r{display:flex;gap:8px;margin-bottom:4px}
+  .rn{color:var(--gold);font-weight:700;flex-shrink:0;width:16px}
+
+  footer{border-top:1px solid var(--line);padding:26px 22px;text-align:center;
+         font-size:11.5px;color:var(--dim);line-height:1.9}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hin">
+    <div class="brandline">
+      <span class="bname">弘川藏酒閣</span>
+      <span class="btag">品 牌 故 事 · 方 向 討 論 版</span>
+    </div>
+    <div class="hsub">加盟招商敘事架構與市場素材整理　｜　版本日期 <b>2026.08</b>　｜　內部討論用，非對外文件</div>
+    <nav class="tabs" id="tabs">
+      <button class="tab on" data-t="s0"><span class="n">00</span>敘事架構</button>
+      <button class="tab" data-t="s1"><span class="n">01</span>三段主軸</button>
+      <button class="tab" data-t="s2"><span class="n">02</span>誰在買酒</button>
+      <button class="tab" data-t="s3"><span class="n">03</span>市場數據</button>
+      <button class="tab" data-t="s4"><span class="n">04</span>誰在裡面</button>
+      <button class="tab" data-t="s8"><span class="n">05</span>全台版圖</button>
+      <button class="tab" data-t="s5"><span class="n">06</span>弘川的位置</button>
+      <button class="tab" data-t="s10"><span class="n">07</span>單杯試飲</button>
+      <button class="tab" data-t="s12"><span class="n">08</span>空間模組</button>
+      <button class="tab" data-t="s11"><span class="n">09</span>行銷制度</button>
+      <button class="tab" data-t="s6"><span class="n">10</span>加盟主看到什麼</button>
+      <button class="tab" data-t="s7"><span class="n">11</span>待討論</button>
+      <button class="tab" data-t="s9"><span class="n">12</span>QA 蒐集表</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== 00 敘事架構 ========== -->
+<section id="s0" class="on">
+  <div class="kick">敘 事 架 構</div>
+  <h1>不是推銷，是讓他自己走到「我可以做」</h1>
+  <p class="lead">整套招商故事的順序是刻意設計的。先講一件跟弘川無關、任何人都會同意的事實；再收斂到弘川身上；最後才落到加盟主自己。走完這三層，他要說服自己的只剩「我可不可以」，而不是「這件事到底靠不靠譜」。</p>
+
+  <div class="card">
+    <div class="flow">
+      <div class="fstep">
+        <div class="fn">1</div>
+        <h4>市場</h4>
+        <p>建立客觀事實：這個生意值得做，而且大多數人沒看見自己進不去。這一層跟弘川無關，所以沒有立場問題。</p>
+      </div>
+      <div class="fstep">
+        <div class="fn">2</div>
+        <h4>品牌</h4>
+        <p>把機會收斂到弘川身上：這個市場的紅利，為什麼是弘川吃得到、而且少數人才吃得到。</p>
+      </div>
+      <div class="fstep">
+        <div class="fn">3</div>
+        <h4>加盟主</h4>
+        <p>前兩層站穩後，才談投資結構與報酬。這時他要處理的只剩「我做不做得來」。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">貫 穿 全 篇 的 原 則</div>
+    <h2>消費者是被「描述」的對象，加盟主是被「說服」的對象</h2>
+    <div class="desc">兩者都要寫，但位置不同。</div>
+    <p>描述消費者，是為了讓加盟主腦中浮現「會有這些人走進我的店」的畫面。所以每一段消費者的描述，最後都要能翻譯成加盟主聽得懂的商業意義——客單價高、需求不會消失、指名品牌。</p>
+    <div class="note gold">
+      <b>寫錯的樣子</b>：「你是不是常買不到真酒？弘川讓你買得安心」——這是講給消費者聽的廣告。<br>
+      <b>寫對的樣子</b>：「送禮的人不比價，只問體不體面、是不是真的。而這種客人指名的，永遠是有名字的酒」——同樣在描述消費者，但加盟主聽到的是：高客單客群存在，而且需求會回流到貨源上。
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">市 場 切 入 角 度 的 判 斷</div>
+    <h2>弘川屬於「看得到吃不到」型</h2>
+    <div class="desc">不同的市場角度，會導向完全不同的講法。弘川不是「沒人知道這行賺錢」，而是「沒人知道這行輪得到你」。</div>
+    <table>
+      <tr><th>角度</th><th>意思</th><th>適用</th></tr>
+      <tr><td class="b">隱形市場</td><td>這門生意根本沒人注意到、沒想過可以經營</td><td style="color:var(--dim)">不適用</td></tr>
+      <tr><td class="b">趨勢轉日常</td><td>從流行變成剛需，結構性成長已經發生</td><td style="color:var(--dim)">不適用</td></tr>
+      <tr><td class="b">被忽略／被誤解</td><td>不是不需要，是印象太舊，讓人以為自己不喜歡</td><td style="color:var(--dim)">不適用</td></tr>
+      <tr><td class="b" style="color:var(--gold3)">看得到吃不到</td><td>大家都知道這行賺錢，但門檻高到外人根本進不去</td><td><span class="tag">弘川</span></td></tr>
+    </table>
+    <div class="note warn">
+      <b>為什麼不能講成「沒人知道這行賺錢」</b>：我們的證據是「這行有很多有錢的大玩家」——國泰、酒條通、橡木桶都在裡面。用「沒人知道」會被自己的證據當場打臉。正確的講法是：<b>不是沒人知道這行賺錢，是沒人知道這行輪得到你。</b>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 01 三段主軸 ========== -->
+<section id="s1">
+  <div class="kick">三 段 主 軸</div>
+  <h1>整套故事的骨架</h1>
+  <p class="lead">這是簡報的三個主標，也是整份招商文件的推進節奏。每一段各自對應後面幾頁的證據素材。</p>
+
+  <div class="card three">
+    <div class="tline">
+      <div class="dot"></div>
+      <div class="tlab">第 一 段 ｜ 市 場</div>
+      <div class="tmain">沒人知道的賺錢模式</div>
+      <div class="tsub">台灣幾大知名通路酒商都是很有錢的人——國泰、酒條通、橡木桶、品酒網，以上都是直營店或是家族企業。</div>
+    </div>
+    <div class="tline">
+      <div class="dot"></div>
+      <div class="tlab">第 二 段 ｜ 門 檻</div>
+      <div class="tmain">知道也進不了的商業門檻</div>
+      <div class="tsub">光是跟品牌簽約就要超過三千萬，經營酒商通路的系統沒經驗也做不起來。</div>
+    </div>
+    <div class="tline hi">
+      <div class="dot"></div>
+      <div class="tlab">第 三 段 ｜ 弘 川</div>
+      <div class="tmain">門檻沒有降低，但機會弘川藏酒閣帶你進來</div>
+      <div class="tsub">不騙他說創業變簡單了，而是說：那道牆還在，只是這一次，門是從裡面打開的。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">三 段 各 自 靠 什 麼 撐</div>
+    <table>
+      <tr><th>段落</th><th>要讓對方得出的結論</th><th>證據素材</th></tr>
+      <tr>
+        <td class="b">第一段</td>
+        <td>這行很賺，但輪不到我</td>
+        <td>四大玩家全直營對照、上下游雙軌結構、四大消費情境、整體酒類需求穩定數據、全台版圖與連鎖化程度</td>
+      </tr>
+      <tr>
+        <td class="b">第二段</td>
+        <td>就算我知道，我也進不去</td>
+        <td>五大國際酒商簽約門檻、通路營運系統與人員訓練門檻</td>
+      </tr>
+      <tr>
+        <td class="b">第三段</td>
+        <td>但透過弘川，我可以</td>
+        <td>250–500 萬投資結構、進價回收機制、多店多倉架構、標準化系統</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">三 個 要 一 起 決 定 的 講 法</div>
+    <h2>建議修正（待創辦人確認）</h2>
+
+    <h3>① 第一句的語意</h3>
+    <p>「沒人知道的賺錢模式」會被自己的證據打臉。建議改成 <b>「不是沒人知道這行賺錢，是沒人知道這行輪得到你」</b>——打的是加盟主的盲點，不是資訊落差。</p>
+
+    <h3>② 三千萬這個數字，講了就要自己接住</h3>
+    <p>三千萬很聳動，但對方腦中會立刻冒出：「那你為什麼只收我 250 萬？」不解釋，他覺得話術有詐；主動解釋，這個數字反而變成最強的武器，因為它把 250 萬重新定義成<b>槓桿</b>而不是<b>花費</b>。</p>
+    <div class="note gold">橋接句參考：<b>那三千萬弘川已經先付了。你付的是入場的門票，不是蓋這棟樓的錢。</b></div>
+
+    <h3>③ 讓加盟主在句子裡有位置</h3>
+    <p>「弘川帶你進來」——主詞是弘川，加盟主是被動的。建議轉成：<b>門檻一點都沒有降低，只是這一次，門是從裡面幫你打開的。</b>承認現實反而更可信，也不侮辱對方的判斷力。</p>
+  </div>
+</section>
+
+<!-- ========== 02 誰在買酒 ========== -->
+<section id="s2">
+  <div class="kick">市 場 ｜ 需 求 面</div>
+  <h1>誰在買酒？</h1>
+  <p class="lead">這一頁的作用是製造畫面感——讓加盟主看見「會有這些人走進我的店」。而錢最多的那一類，買的人根本不喝。</p>
+
+  <div class="grid2">
+    <div class="cat">
+      <div class="cno">情 境 一</div>
+      <div class="cnm">自己要喝的</div>
+      <div class="cnt">最容易想像，但其實不是主力</div>
+      <div class="chips">
+        <span class="chip">下班小酌</span><span class="chip">朋友來家裡</span><span class="chip">KTV 續攤前先買</span>
+        <span class="chip">深夜第二攤補貨</span><span class="chip">露營烤肉</span><span class="chip">跨年海邊</span>
+        <span class="chip">約會紀念日</span><span class="chip">調酒買基酒</span>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cno">情 境 二</div>
+      <div class="cnm">買給別人喝的</div>
+      <div class="cnt">請客、面子——量大，且有明確時間點</div>
+      <div class="chips">
+        <span class="chip">尾牙春酒</span><span class="chip">業績慶功</span><span class="chip">生日趴</span>
+        <span class="chip">謝師宴同學會</span><span class="chip">老闆請客戶</span><span class="chip">婚宴自備酒水</span>
+        <span class="chip">訂婚提親</span>
+      </div>
+    </div>
+
+    <div class="cat hi">
+      <div class="cno">情 境 三</div>
+      <div class="cnm">買了根本不喝的</div>
+      <div class="cnt">最常被忽略，卻是客單價最高的一群</div>
+      <div class="chips">
+        <span class="chip">過年送長輩</span><span class="chip">送主管送醫師</span><span class="chip">包工程談合約</span>
+        <span class="chip">開幕祝賀入厝</span><span class="chip">限量收藏增值</span><span class="chip">拜拜祭祖</span>
+        <span class="chip">喪事用酒</span><span class="chip">出生年份藏一支</span><span class="chip">退休紀念</span>
+        <span class="chip">酒櫃門面陳列</span>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cno">情 境 四</div>
+      <div class="cnm">商業採購</div>
+      <div class="cnt">穩定、重複、量大——營收的地基</div>
+      <div class="chips">
+        <span class="chip">熱炒店叫貨</span><span class="chip">居酒屋補貨</span><span class="chip">民宿迷你吧</span>
+        <span class="chip">公司年節禮</span><span class="chip">婚顧辦桌業者</span><span class="chip">網拍代購轉售</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <div class="ct">客 單 價 概 念 比 較</div>
+    <div class="brow"><div class="blb">① 自己喝</div><div class="btr"><div class="bf f1" style="width:32%">日常價位，重複性高</div></div></div>
+    <div class="brow"><div class="blb">② 請客</div><div class="btr"><div class="bf f2" style="width:52%">量大，看場合升級</div></div></div>
+    <div class="brow"><div class="blb">③ 不喝的人買</div><div class="btr"><div class="bf f3" style="width:100%">不比價，只問體不體面、是不是真的</div></div></div>
+    <div class="brow"><div class="blb">④ 商業採購</div><div class="btr"><div class="bf f4" style="width:70%">單價中等，但月月都來</div></div></div>
+    <span class="src">※ 示意性比較，用於說明四種消費動機的價格敏感度差異，非實際營收占比或客單價數據。</span>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">這 一 段 要 翻 譯 給 加 盟 主 的 三 件 事</div>
+    <p><b>一、</b>撐起營業額的不是酒鬼。<b>不喝酒的人買的酒，往往比喝酒的人買的貴。</b>送禮、收藏、開幕、拜拜——這些人不在乎便宜，在乎的是體不體面、是不是真的。</p>
+    <p><b>二、</b>這些場景<b>沒有一個會消失</b>。過年會來、婚喪喜慶會來、開幕會來、續攤會來，年年都來。這不是靠流行撐起來的生意。</p>
+    <p><b>三、</b>它們指名的全部都是<b>「有名字的酒」</b>。沒有人送禮送一支沒聽過的酒，沒有人收藏雜牌威士忌。</p>
+    <div class="punch">所以需求最後全部流回同一個地方——<br>問題從來不是有沒有人買，而是<span>誰有資格賣</span>。</div>
+  </div>
+
+  <div class="refs">
+    <b>資 料 性 質 說 明</b>
+    <div class="r"><span class="rn">1</span><span>四大情境分類與場景清單為依台灣消費文化與酒類使用場合所作之<b style="color:var(--mute)">質性歸納</b>，非市場調查或統計資料。用途為建立消費畫面感，不宜作為量化依據。</span></div>
+    <div class="r"><span class="rn">2</span><span>客單價階梯為<b style="color:var(--mute)">示意性比較</b>，非實際營收占比數據。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:var(--gold2)">建議</b>：若能提供弘川實際銷售結構（禮盒／收藏款營收占比、各客群客單價），應以真實數據取代本頁示意圖表，說服力與抗提問能力將大幅提升。</span></div>
+  </div>
+</section>
+
+<!-- ========== 03 市場數據 ========== -->
+<section id="s3">
+  <div class="kick">市 場 ｜ 數 據 核 實</div>
+  <h1>整體穩定，威士忌修正中</h1>
+  <p class="lead">這一頁是誠實版。整體酒類的穩定性是真的，可以放心講；但威士忌近兩年在跌，如果拿舊數據講「高速成長」，遇到懂行的加盟主會被當場拆穿，整套故事的信用會一起崩。</p>
+
+  <div class="card">
+    <div class="ct">A ｜ 整 體 盤 面</div>
+    <h2>台灣酒類年總需求量：十年不動如山<sup>1</sup></h2>
+    <div class="desc">近十年維持在 7.06–7.55 億公升區間，僅兩次跌破，且都立刻回穩。</div>
+    <div class="stats">
+      <div class="stat"><div class="num">7.06–7.55<small>億公升</small></div><div class="lbl">近十年年需求量區間<br>約 282–302 座國際標準游泳池</div></div>
+      <div class="stat"><div class="num">6.85<small>億</small></div><div class="lbl">民102年 酒駕加重罰鍰<br>唯一一次結構性衝擊，隨即回穩</div></div>
+      <div class="stat"><div class="num">6.91<small>億</small></div><div class="lbl">民110年 疫情重創餐飲<br>民111年即回到 7.06 億</div></div>
+    </div>
+    <div class="note good"><b>這是弘川最強的護城河論述。</b>酒駕加重罰鍰、疫情重創餐飲——兩個級別的外部衝擊，都只讓它凹一下就回來。這門生意的底盤不靠風口。</div>
+    <div class="note gold" style="margin-top:12px">
+      <b>另一個結構性趨勢</b>：國產酒市占從民101年的 73.4% 降到民111年的 53.9%（-19.5 個百分點）；同期進口量從 1.9 億公升增加到 3.26 億公升，年均 +5.6%。<br>
+      <span style="color:var(--gold2)">→ 錢正從國產酒流向進口酒，而進口酒正是需要簽約才拿得到的品項。</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">B ｜ 蘇 格 蘭 威 士 忌 全 球 出 口 額</div>
+    <h2>2022 見頂之後，連續三年下滑（億英鎊）<sup>2</sup></h2>
+    <div class="desc">全球盤面，非台灣單一市場。2022 年 62 億英鎊為歷史紀錄。</div>
+    <div class="brow"><div class="blb">2019</div><div class="btr"><div class="bf fest" style="width:79%">約 49（估算）</div></div></div>
+    <div class="brow"><div class="blb">2022</div><div class="btr"><div class="bf fpeak" style="width:100%">62.0　歷史高峰</div></div></div>
+    <div class="brow"><div class="blb">2023</div><div class="btr"><div class="bf fnorm" style="width:90%">約 56.1（估算）</div></div></div>
+    <div class="brow"><div class="blb">2024</div><div class="btr"><div class="bf fnorm" style="width:87%">54.0　▼ 3.7%</div></div></div>
+    <div class="brow"><div class="blb">2025</div><div class="btr"><div class="bf fnorm" style="width:86.5%">53.6　▼ 0.6%</div></div></div>
+    <div class="note warn">全球盤面在修正，但跌勢趨緩（-3.7% → -0.6%）。<b>台灣的狀況比全球嚴重得多。</b></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">C ｜ 台 灣 市 場 ─ ─ 必 須 正 視</div>
+    <h2>連兩年下滑，2025 跌幅居全球前十大市場之首<sup>3</sup></h2>
+    <div class="desc">台灣仍是蘇格蘭威士忌第四大市場，但下滑幅度是前十名裡最重的。</div>
+    <div class="drops">
+      <div class="drop"><div class="dnum">▼13%</div><div class="dlbl">2024 年台灣本地威士忌消費</div></div>
+      <div class="drop"><div class="dnum">▼22%</div><div class="dlbl">2025 年蘇格蘭威士忌對台出口額<br>跌幅全球前十大市場第一</div></div>
+      <div class="drop"><div class="dnum">▼6.0%</div><div class="dlbl">2025 全球單一麥芽價值下跌<br>台灣單一麥芽市佔約 45.6%</div></div>
+    </div>
+    <div class="note warn">
+      <b>台灣下滑的三個原因：</b><br>
+      ① 疫後進口量屢創新高，2025 消費紅利消失，<b>通路端庫存嚴重積壓</b>，進口商被迫減單<br>
+      ② 重押高端單一麥芽，經濟放緩下高價位首當其衝，消費者轉向性價比品項<br>
+      ③ 單一品類依賴過高，缺乏其他品類分散風險
+    </div>
+    <div class="note good">
+      <b>但第三點正好反證弘川的結構優勢。</b>弘川是綜合酒類通路（威士忌、啤酒、清酒、梅酒、雪茄、高粱），不是單押威士忌的專門店。「單一品類依賴過高」這個問題，恰恰是弘川沒有的。
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">策 略 結 論</div>
+    <h2>不要用「威士忌高速成長」當主論述</h2>
+    <p><b>一、</b>主論述改用<b>整體酒類需求穩定</b>——這是真的，而且是護城河。</p>
+    <p><b>二、</b>威士忌的修正反過來是弘川的機會：修正期活不下去的，是單押威士忌的專門店，以及沒有現金部位的小酒商。<b>綜合通路＋原廠直簽的，反而吃到別人退出的份額。</b></p>
+    <p><b>三、</b>2019 年那批漂亮數據（威士忌年銷 546 億、全球第三、頂級款成長 30%）留著當背景，但不要當成現在式來講。</p>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源</b>
+    <div class="r"><span class="rn">1</span><span>經濟部統計處《進口酒在我國酒類消費市場占比逐漸提升》產業經濟統計簡訊，2023-05-15 發布。統計基礎＝國產量＋進口量－出口量。原始數據為財政部關務署海關進出口統計與國庫署菸酒統計。</span></div>
+    <div class="r"><span class="rn">2</span><span>Scotch Whisky Association (SWA) 2024 年度出口數據（2025-02 公布）、2025 年度出口數據（2026-02 公布）。2019、2023 年數值為依公布成長率反推之估算。中文整理：一飲樂酒誌。</span></div>
+    <div class="r"><span class="rn">3</span><span>悅活誌〈台灣威士忌市場「修正期」：2025 年蘇格蘭出口額跌幅居冠〉2026-02-14；一飲樂酒誌〈2024 年蘇格蘭威士忌出口額下滑 3.7%、台灣下滑 13%〉2025-02-14。</span></div>
+    <div class="r"><span class="rn">※</span><span>查證日期 2026 年 8 月。台灣酒類需求量逐年完整數列未於公開來源取得，本頁以區間值＋已知年度點位呈現，未虛構中間年度。完整數列可向財政部國庫署「菸酒產製進口統計資料」申請。</span></div>
+  </div>
+</section>
+
+<!-- ========== 04 誰在裡面 ========== -->
+<section id="s4">
+  <div class="kick">市 場 ｜ 門 檻 證 據</div>
+  <h1>誰已經在裡面？</h1>
+  <p class="lead">這一頁是整套故事最有殺傷力的證據。它不是在講「這行門檻很高」這種抽象的話，而是直接點名——現在坐在裡面的是誰，他們怎麼進去的，以及他們為什麼從來不開門。</p>
+
+  <div class="card">
+    <div class="ct">主 要 玩 家 盤 點</div>
+    <h2>全部直營，沒有一家開放加盟</h2>
+    <div class="desc">這不是巧合，是這個產業的結構性選擇。</div>
+    <table>
+      <tr><th>品牌</th><th>成立</th><th>規模</th><th>擴張方式</th><th>真實身分</th></tr>
+      <tr>
+        <td class="b">橡木桶洋酒</td><td>1993</td>
+        <td>全台 34 家門市<br><span style="color:var(--dim);font-size:12px">遍佈北中南</span></td>
+        <td><span class="tag">直營</span><br><span style="color:var(--dim);font-size:11.5px;line-height:1.8">1999 改股份有限公司<br>門市轉型為「分公司」</span></td>
+        <td>全國最大洋酒量販連鎖<br><span style="color:var(--dim);font-size:12px">同時為酒類代理業務推廣中心</span><span class="src">來源：橡木桶洋酒官網<sup>1</sup></span></td>
+      </tr>
+      <tr>
+        <td class="b">酒條通洋酒</td><td>2008</td>
+        <td>42 家門市<br><span style="color:var(--dim);font-size:12px">起家於雙北 9 家</span></td>
+        <td><span class="tag">直營</span><br><span style="color:var(--dim);font-size:11.5px;line-height:1.8">直營門市持續穩定擴展</span></td>
+        <td>台灣菸酒／麒麟啤酒／愛丁頓／<br>仕高利達 北區餐飲通路經銷商<br><span style="color:var(--dim);font-size:12px">雙北約 500 家餐飲客戶</span><span class="src">來源：酒條通官網及產業媒體報導<sup>2</sup></span></td>
+      </tr>
+      <tr>
+        <td class="b">國泰洋酒</td><td style="color:var(--dim)">—</td><td style="color:var(--dim)">—</td>
+        <td><span class="tag">直營</span></td>
+        <td>台灣<b>中部地區總經銷商</b><span class="src">來源：國泰洋酒官網<sup>3</sup></span></td>
+      </tr>
+      <tr>
+        <td class="b">買酒網／品酒網</td><td style="color:var(--dim)">—</td><td>電商為主</td>
+        <td><span class="tag">自營</span></td>
+        <td>線上通路，同樣掌握代理酒源<span class="src">來源：買酒網<sup>4</sup></span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct">關 鍵 洞 察</div>
+    <h2>他們不是「開店賣酒」，是「拿代理權往下鋪貨」</h2>
+    <div class="desc">零售只是出海口，真正賺錢的引擎在上游。</div>
+    <div class="dual">
+      <div class="lane up">
+        <div class="ln">真 正 的 引 擎</div>
+        <div class="lt">上游｜代理 · 經銷</div>
+        <p>拿到品牌代理或區域總經銷權，往下鋪給餐飲通路、量販、超市、其他零售商。酒條通光雙北就有約 500 家餐飲客戶。</p>
+      </div>
+      <div class="lane">
+        <div class="ln">看 得 見 的 那 一 面</div>
+        <div class="lt">下游｜門市零售</div>
+        <p>一般人以為的「酒行」，其實只是他們整條供應鏈的最末端出海口。</p>
+      </div>
+    </div>
+    <div class="note warn">
+      <b>所以他們不需要加盟主。</b>加盟會稀釋通路控制權，而通路控制權正是他們的命根子。他們不是不想擴張——是不需要你。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">加 盟 開 放 度 盤 點</div>
+    <h2>三十年來，這道門沒有為外人開過</h2>
+    <div class="bignum">
+      <div class="v">0</div>
+      <div class="k">主要連鎖酒類通路中，開放加盟的品牌數<sup>1,2,3,4</sup></div>
+    </div>
+    <div class="note">
+      ・橡木桶洋酒：成立 33 年，34 家門市，全直營，門市轉型為「分公司」<br>
+      ・酒條通洋酒：成立 18 年，42 家門市，全直營，同時經營上游經銷<br>
+      ・國泰洋酒：區域總經銷商，不對外開放<br>
+      ・買酒網／品酒網：自營電商，掌握代理酒源
+    </div>
+    <div class="punch">
+      這一行的大玩家，三十年來沒有一家開放加盟。<br>
+      <span>不是他們不想擴張，是他們不需要你。</span>
+    </div>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源 與 嚴 謹 度 說 明</b>
+    <div class="r"><span class="rn">1</span><span>橡木桶洋酒官網「關於橡木桶」頁面。含 1993 年成立、松江旗艦店、34 家門市、1999 年改制股份有限公司並推動門市轉型分公司等敘述。</span></div>
+    <div class="r"><span class="rn">2</span><span>酒條通洋酒官網門市頁、公司自述資料，及產業媒體報導（提及第 42 家門市）。含 2008 年成立、雙北九家直營起家、台灣菸酒／麒麟／愛丁頓／仕高利達北區餐飲通路經銷商、雙北約 500 家餐飲客戶等敘述。</span></div>
+    <div class="r"><span class="rn">3</span><span>國泰洋酒官網，自述為臺灣中部地區總經銷商。</span></div>
+    <div class="r"><span class="rn">4</span><span>買酒網等線上酒類通路官網。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:var(--mute)">「0 家」為依公開資訊盤點所得之觀察結論，非官方統計。</b>對外簡報建議表述為「主要連鎖酒類通路均採直營，未見開放加盟」較為嚴謹。門市數為官網／媒體報導數字，可能已異動，正式對外前建議再核對。「上下游雙軌結構」為依各業者自述營業內容所作之結構分析，非業者官方說法。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:var(--gold2)">待補</b>：全台菸酒零售業家數與縣市分布，可至財政部「營利事業家數及銷售額統計」資料庫依行業別＋縣市別查詢。取得後可再強化「獨立店多、有實力的連鎖少」的對比。</span></div>
+  </div>
+</section>
+
+<!-- ========== 05 全台版圖 ========== -->
+<section id="s8">
+  <div class="kick">市 場 ｜ 全 台 版 圖</div>
+  <h1>還有多少空間？空間在哪裡？</h1>
+  <p class="lead">前一頁講的是「這道門沒有為外人開過」。這一頁講的是門後面還有多大——以及對加盟主而言最實際的問題：如果我要開，開在哪裡贏面最高。資料來自 Google 地圖九縣市掃描，2026 年 8 月。</p>
+
+  <div class="card gold">
+    <div class="ct">市 場 天 花 板</div>
+    <h2>五百億的市場，最大的連鎖只有 34 家店</h2>
+    <div class="desc">這組對比本身就是論述——這個量級的市場，連鎖化程度幾乎是零。</div>
+    <div class="stats">
+      <div class="stat"><div class="num">546<small>億元</small></div><div class="lbl">威士忌單一品類台灣年銷售額<br><span style="color:var(--dim)">2019 年數據，見第 03 頁時效說明</span></div></div>
+      <div class="stat"><div class="num">34<small>家</small></div><div class="lbl">全台最大連鎖洋酒門市數<br>（橡木桶洋酒）</div></div>
+      <div class="stat"><div class="num">120–180<small>家</small></div><div class="lbl">弘川型門市全台合理店數上限<br><span style="color:var(--dim)">模型估算，需資料驗證</span></div></div>
+    </div>
+    <div class="note gold">
+      估算基礎為「可支撐高單價酒專的商圈數」，非普查推導。<b>這個數字要進董事會之前，需要用財政部稅籍資料驗證。</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">戰 略 重 構 ─ ─ 最 重 要 的 一 點</div>
+    <h2>不是填地理空白，是換掉沒有代理權的獨立店</h2>
+    <p>九縣市掃描後最關鍵的發現：<b>連鎖只佔全部店家約三分之一，其餘全是獨立店</b>。這些店多半沒有代理商帳號、拿不到指名酒款、也沒有品牌。</p>
+    <div class="note gold">
+      弘川的加盟賣點是「一開店就有八家代理商帳號」。<br>
+      <span style="color:var(--gold2)">→ 所以擴張的對象不是去搶連鎖的客人，是去<b>升級這批分散的獨立店</b>。連鎖滲透率越低的縣市，這個賣點的殺傷力越大。</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">三 種 戰 場 ， 三 種 打 法</div>
+    <h2>展店順序不是照人口排，是照勝率排</h2>
+    <table>
+      <tr><th>戰場</th><th>地區</th><th>打法</th><th>結論</th></tr>
+      <tr>
+        <td class="b">加密戰</td>
+        <td>台中 · 桃園</td>
+        <td>品牌已有認知、總倉配送半徑內、人力可互相支援，同生活圈再開邊際成本最低。<br><span style="color:var(--dim);font-size:12px">要守的是不自我競爭：同商圈只放一家，用行政區或幹道畫死保障範圍，寫進加盟合約</span></td>
+        <td>最低風險，成長天花板有限。<b>適合當加盟樣板店</b></td>
+      </tr>
+      <tr>
+        <td class="b">貼身戰</td>
+        <td>北北基 · 高雄</td>
+        <td>人口與所得最厚，但既有酒專最密、連鎖對手主場，租金高墊高損益平衡點。<br><span style="color:var(--dim);font-size:12px">切入點不是價格，是配額與品項：包桶、限量、雪茄、代理商直配。價格戰在這裡必輸</span></td>
+        <td>品牌形象戰場。<b>用少數旗艦拿聲量，不用來衝店數</b></td>
+      </tr>
+      <tr>
+        <td class="b">空白戰</td>
+        <td>縣級市 · 鄉鎮</td>
+        <td>對手是雜貨兼賣酒的老菸酒行，店名多為「某某行」「某某商行」，根本拿不到麥卡倫。租金低、對手弱。</td>
+        <td><b>最適合放樣板店驗證單店模型</b></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">九 縣 市 判 讀</div>
+    <h2>桃園是最被低估的戰場</h2>
+    <p><b>桃園</b>｜234 萬人，卻沒有任何一個連鎖體系認真佈局——酒條通只有兩家、橡木桶掛零。但宸霆、珍藏家這類量販型獨立店的 Google 評論數各自破千（1,436／893），代表需求極強、只是沒有品牌來收。而弘川在桃園已有倉庫與門市，配送半徑現成。<b>這是「加密戰」與「空白戰」少見的重疊點，應排在展店順序第一。</b></p>
+    <p><b>台中</b>｜弘川主場，也是全台在地連鎖最密的地方：利百加六店、京旺三店、茂林兩店，合計逾二十店。<b>台中的問題不是開不開得成，是會不會自我競爭</b>——同商圈只放一家必須寫死在合約裡，否則加盟主第一個懷疑的就是總部會不會在隔壁再開一家。</p>
+    <p><b>苗栗 · 宜蘭</b>｜典型的「只有老菸酒行」，連鎖滲透率幾乎是零。租金低、對手弱，<b>最乾淨的空白市場，適合放樣板店</b>。宜蘭因雪隧成為雙北後花園，羅東是唯一有商圈厚度的點，礁溪靠溫泉客與飯店採購。</p>
+    <p><b>新竹縣市</b>｜科技業高所得客層，送禮與企業採購佔比高。竹北高鐵沿線已聚集多家高單價酒專（旭亨、正泓、VINDEX），證明市場撐得住。<b>不能靠便宜打，要用配額與稀有品項切入</b>，但也要準備好被懂酒的客人考。</p>
+    <p><b>新北</b>｜400 萬人、店數最多，但分布極度不均：板橋三重中永和密集，樹林蘆洲五股三峽稀疏。<b>要挑外圍衛星區，別碰板橋核心。</b></p>
+    <p><b>基隆</b>｜人口在流失，但港區與海鮮餐飲的 B2B 需求穩定，店家幾乎全是老式菸酒行。市場不大但對手更弱，適合單店試水。</p>
+  </div>
+
+  <div class="card">
+    <div class="ct">台 北 競 爭 地 圖</div>
+    <h2>橡木桶不是台北的老大</h2>
+    <div class="desc">12 個行政區共掃到約 108 家菸酒專賣店。這個發現與一般印象相反。</div>
+    <div class="stats">
+      <div class="stat"><div class="num">14<small>店 / 9區</small></div><div class="lbl">酒條通在台北的門市數<br><b style="color:var(--gold3)">才是真正的對手</b></div></div>
+      <div class="stat"><div class="num">4<small>店</small></div><div class="lbl">橡木桶在台北的門市數<br>雖有「全台最大連鎖」名號</div></div>
+      <div class="stat"><div class="num">約 1/3</div><div class="lbl">連鎖店佔比<br>其餘皆為獨立店</div></div>
+    </div>
+    <div class="note gold">
+      <b>要打台北，對手是酒條通與佳賀洋行這類密集布點的體系，不是知名度最高的那個。</b>
+    </div>
+    <h3>台北相對空隙：北投與內湖</h3>
+    <div class="brow"><div class="blb">北投</div><div class="btr"><div class="bf fup" style="width:100%">每店約服務 4.0 萬人　空隙最大</div></div></div>
+    <div class="brow"><div class="blb">內湖</div><div class="btr"><div class="bf fnorm" style="width:80%">每店約服務 3.2 萬人</div></div></div>
+    <div class="brow"><div class="blb">中山</div><div class="btr"><div class="bf fdn" style="width:43%">每店約服務 1.7 萬人　最擁擠</div></div></div>
+    <div class="note">若要在台北落第一家，北投與內湖的相對空隙最大，租金也比大安信義友善。</div>
+  </div>
+
+  <div class="card gold" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:16px;font-weight:700;color:var(--gold3);margin-bottom:4px">互動版：九縣市酒專分布地圖</div>
+      <div style="font-size:13px;color:var(--mute)">可切換縣市，看家數、每店服務人口、連鎖佔比、行政區分布與完整店家清單，並支援「只看連鎖／只看獨立」篩選</div>
+    </div>
+    <a href="/map.html" style="background:var(--gold);color:#12100d;font-weight:800;font-size:14px;
+       padding:11px 22px;border-radius:8px;text-decoration:none;white-space:nowrap">開啟地圖 →</a>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源 與 限 制</b>
+    <div class="r"><span class="rn">1</span><span>店家資料來自 <b style="color:var(--mute)">Google 地圖搜尋結果（2026 年 8 月）</b>，涵蓋宜蘭、基隆、台北、新北、桃園、新竹市、新竹縣、苗栗、台中共九縣市。</span></div>
+    <div class="r"><span class="rn">2</span><span><b style="color:#f0a58e">重要限制：這是可見度較高的店，不是完整普查。</b>巷內小菸酒行、只做批發的商號多半不在其中。愈往鄉鎮低估愈嚴重——苗栗抓到 17 家，實際數字推估是三到五倍。<b style="color:var(--mute)">相對比較可靠，絕對家數不可靠。</b></span></div>
+    <div class="r"><span class="rn">3</span><span>人口為各縣市／行政區約略值，密度指標僅用於相對比較。120–180 家為模型估算，非普查推導。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:var(--gold2)">下一步兩條路</b>：① 用財政部稅籍資料（全國營業稅籍登記資料集，篩菸酒零售業別代碼）做真正的全台普查；② 疊上餐飲密度圖層，因為 B2B 才是這些縣市的真正營收來源。</span></div>
+  </div>
+</section>
+
+<!-- ========== 06 弘川的位置 ========== -->
+<section id="s5">
+  <div class="kick">品 牌 ｜ 弘 川 的 位 置</div>
+  <h1>那道門，弘川已經走進去了</h1>
+  <p class="lead">前面兩段建立了「這行賺錢、但外人進不去」。這一段要回答的只有一件事——為什麼弘川進得去，而且為什麼這件事很難複製。</p>
+
+  <div class="card gold">
+    <div class="ct">核 心 資 產</div>
+    <h2>五大國際酒商，全數正式簽約</h2>
+    <div class="desc">這是整個品牌最硬的一塊資產，也是第三段能成立的唯一理由。</div>
+    <div class="chips" style="gap:8px">
+      <span class="chip" style="font-size:13.5px;padding:8px 16px">帝亞吉歐 Diageo</span>
+      <span class="chip" style="font-size:13.5px;padding:8px 16px">保樂力加 Pernod Ricard</span>
+      <span class="chip" style="font-size:13.5px;padding:8px 16px">格蘭父子 William Grant &amp; Sons</span>
+      <span class="chip" style="font-size:13.5px;padding:8px 16px">寰盛洋酒 · 愛丁頓</span>
+      <span class="chip" style="font-size:13.5px;padding:8px 16px">酩悅軒尼詩 MHD</span>
+    </div>
+    <div class="note gold" style="margin-top:18px">
+      對加盟主的意義：他架上擺的不是零星批貨湊出來的雜牌，而是<b>消費者會指名、而且獨立店根本拿不到的正貨</b>。前面第 02 頁講的那些送禮、收藏、開幕、拜拜的需求，全部要靠這個才接得住。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">其 他 支 柱</div>
+    <h2>不只有貨源，還有一套跑得動的系統</h2>
+    <table>
+      <tr><th>能力</th><th>內容</th><th>解決加盟主的什麼心魔</th></tr>
+      <tr>
+        <td class="b">通路營運系統</td>
+        <td>標準化後台：庫存查詢、結帳、日報表，多店多倉同一套系統運作</td>
+        <td>「我沒做過零售，管得動嗎？」</td>
+      </tr>
+      <tr>
+        <td class="b">人員訓練制度</td>
+        <td>新人教育訓練教材＋考核試卷，產品知識、價格、品項全部制度化</td>
+        <td>「我不懂酒，員工也不懂，怎麼賣？」</td>
+      </tr>
+      <tr>
+        <td class="b">真偽辨識能力</td>
+        <td>酒標浮水印、瓶封工藝、瓶口密封、公司貨與機場貨版本差異</td>
+        <td>「萬一收到假貨、賣出去出事怎麼辦？」</td>
+      </tr>
+      <tr>
+        <td class="b">多店多倉架構</td>
+        <td>中清、公園、自由、黎明、中壢——已驗證過的複製模型，不是單店經驗</td>
+        <td>「這套模式只有創辦人做得起來吧？」</td>
+      </tr>
+      <tr>
+        <td class="b">綜合品類</td>
+        <td>威士忌、啤酒、清酒、梅酒、雪茄、高粱，非單押單一品類</td>
+        <td>「威士忌在跌，這門生意會不會出事？」</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct">品 牌 段 落 的 收 尾</div>
+    <p>弘川不是一間比較大的酒行。它是<b>少數把上游那道門打穿、而且把打穿之後的營運方式標準化下來的通路</b>。前者決定它拿得到什麼貨，後者決定這件事能不能複製給第二個人、第三個人。</p>
+    <div class="punch">大玩家守著這道門，是因為他們要獨佔。<br><span>弘川打開這道門，是因為它要的是規模。</span></div>
+    <span class="src">※ 上句為文案草稿方向，需與創辦人確認是否符合實際策略意圖（見第 11 頁待討論事項）。</span>
+  </div>
+</section>
+
+<!-- ========== 07 單杯試飲 ========== -->
+<section id="s10">
+  <div class="kick">品 牌 ｜ 第 二 條 護 城 河</div>
+  <h1>單杯試飲：台灣通路地圖上的空位</h1>
+  <p class="lead">五大酒商簽約解決的是「拿不拿得到貨」。單杯試飲解決的是另一個問題——當隔壁有量販、Costco 跟電商在殺價，這家店憑什麼贏。而且它不是行銷活動，它本身就賺錢。</p>
+
+  <div class="card">
+    <div class="ct">台 灣 通 路 地 圖</div>
+    <h2>每一類都只解決了問題的一半</h2>
+    <table>
+      <tr><th>通路型態</th><th>能否試飲</th><th>能否當場買整瓶</th><th>能否回報消費者數據</th><th>對品牌的限制</th></tr>
+      <tr><td class="b">全國連鎖酒專</td><td>不定期品酒會</td><td>可</td><td>僅出貨數字</td><td>貨架邏輯、日間營業。消費者沒喝過就不敢買高價品項</td></tr>
+      <tr><td class="b">威士忌吧</td><td>可（單杯）</td><td style="color:var(--red)">不可</td><td>否</td><td>賣的是氛圍與服務費，試飲不會轉成整瓶銷售</td></tr>
+      <tr><td class="b">電商／量販</td><td style="color:var(--red)">不可</td><td>可</td><td>有交易數據、無飲用行為</td><td>純比價，高價品項難建立價值感</td></tr>
+      <tr><td class="b">酒展</td><td>可</td><td>部分</td><td>單次、粗略</td><td>一年三天，攤位成本高，觸及後無延續、無歸因</td></tr>
+      <tr style="background:#1a1510"><td class="b" style="color:var(--gold3)">弘川藏酒閣</td><td style="color:var(--green)">常態單杯＋月度主題場</td><td style="color:var(--green)">可，就在旁邊</td><td style="color:var(--green)">可（標準化月報）</td><td>—</td></tr>
+    </table>
+    <div class="note gold">
+      <b>一句話定位</b>：弘川把<b>酒吧的試飲</b>、<b>酒專的售價</b>、<b>夜間商圈的即時性</b>疊在同一個空間——客人可以先喝一杯，喜歡就把整瓶帶走，全程不超過三十分鐘。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">三 個 結 構 性 優 勢</div>
+    <h2>這個位置為什麼別人補不上</h2>
+    <div class="flow">
+      <div class="fstep"><div class="fn">1</div><h4>時段</h4><p>18:00–03:00 營業。客人是<b>已經進入飲酒與招待情境</b>的人，不是白天路過的人。試飲接受度與當場成交率，跟日間通路不是同一個量級。</p></div>
+      <div class="fstep"><div class="fn">2</div><h4>客層</h4><p>門市座落錢櫃、海派、超巨等大型 KTV 商圈核心。主要客層是商務招待、企業採購與收藏客——烈酒品牌<b>最想觸及卻最難系統性接觸</b>的一群人。</p></div>
+      <div class="fstep"><div class="fn">3</div><h4>閉環</h4><p>試飲、教育、成交、回購<b>在同一個空間完成</b>。品牌不必再擔心「品酒會辦得很成功，但不知道有沒有轉成銷售」。</p></div>
+    </div>
+    <div class="note">
+      這不是因為沒人想到，而是它需要同時具備三個條件：<b>夜間營業的時段、能承受高價酒拆瓶的庫存結構、願意做記錄的營運流程</b>。弘川三者兼具。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">三 層 結 構</div>
+    <h2>同一件事，拆成三個節奏不同的產品</h2>
+    <div class="desc">層級越高，越是「只有連鎖辦得起」。</div>
+    <table>
+      <tr><th>層級</th><th>內容</th><th>任務</th></tr>
+      <tr><td class="b">第一層<br>常態單杯酒單</td><td>每天都有，10–15 支輪換，每月換一次。分入門／進階／珍藏三個價帶，最高價那支是引流話題酒</td><td>創造「今天要不要順路去弘川喝一杯」的來店理由，並解決高價酒庫存周轉</td></tr>
+      <tr><td class="b">第二層<br>月度主題品飲會</td><td>每月一場，16 人、90 分鐘、6 款酒。可預約、收費、有名額限制</td><td>內容產出機。每場產出照片、短影音、名單，是全年社群素材的來源</td></tr>
+      <tr style="background:#1a1510"><td class="b" style="color:var(--gold3)">第三層<br>年度稀有酒開瓶巡迴</td><td>一年一次，總部出一支市價五萬以上的酒，六家店輪流開，每店 10 個名額，開瓶儀式全程錄影</td><td><b>招商武器</b>。回答「我自己開一家酒專不行嗎」——單店買不起、也湊不到人</td></tr>
+    </table>
+    <div class="note gold">
+      <b>第三層是整套設計的支點。</b>一支五萬元的酒，單店開下去要一次找到 30 個願意付兩千五的客人，風險太高。六家店各分 10 個名額，風險瞬間變成六分之一，而且形成「巡迴」的敘事張力——第一場在哪、還剩幾場、最後一杯在誰手上。<span style="color:var(--gold2)">這是加盟體系才給得起的東西。</span>
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">單 杯 經 濟 學</div>
+    <h2>為什麼這件事本身就賺錢</h2>
+    <div class="desc">重點不在數字本身，而在結構——單杯的毛利率高於整瓶，而且活動不是成本中心。</div>
+
+    <h3>常態單杯：一瓶當兩瓶賣</h3>
+    <div class="stats">
+      <div class="stat"><div class="num">＋2,200<small>／瓶</small></div><div class="lbl">中價位酒款（進價 3,000）<br>拆 20 杯 × 300 元 ＝ 6,000<br>整瓶零售約 3,800</div></div>
+      <div class="stat"><div class="num">33%</div><div class="lbl">高價珍藏酒（進價 20,000）<br>拆 20 杯 × 1,500 ＝ 30,000<br>毛利 10,000</div></div>
+      <div class="stat"><div class="num">兩週</div><div class="lbl">壓在架上一年的酒<br>拆杯後的變現時間</div></div>
+    </div>
+    <div class="note gold">
+      <b>這是整份文件最該寫進招商文案的一句：</b>單杯不是「犧牲一瓶酒做行銷」，是<b>高價酒的庫存解方</b>。越貴、越冷門、越賣不動的酒，拆杯的效益越高。<br>
+      <span style="color:var(--gold2)">→ 它直接對準加盟主最大的恐懼：「我進了貴的酒賣不掉怎麼辦」。跟第 09 頁的進價回收機制是同一套邏輯的兩隻手。</span>
+    </div>
+
+    <h3>月度主題品飲會：自負盈虧，且有毛利</h3>
+    <table>
+      <tr><th colspan="2">單場試算｜16 人 × 6 款酒 × 每款 15ml</th></tr>
+      <tr><td>票收（800 × 16 人）</td><td class="b" style="color:var(--green)">＋12,800</td></tr>
+      <tr><td>用酒成本（約 2.1 瓶 × 平均進價 1,800）</td><td>−3,700</td></tr>
+      <tr><td>物料（酒卡、品飲墊、名牌、佈置）</td><td>−1,200</td></tr>
+      <tr><td>人力（店內既有人力）</td><td>0</td></tr>
+      <tr><td class="b">單場淨毛利</td><td class="b" style="color:var(--gold3)">＋7,900</td></tr>
+      <tr><td>現場整瓶轉換（假設 30% × 客單 3,500）</td><td style="color:var(--green)">＋17,500 營收</td></tr>
+    </table>
+    <div class="note">
+      若用酒由酒商贊助，單場淨毛利提升到 <b>11,600</b>，全年 12 場即 <b>139,200</b>——等於行銷預算完全由酒商資源與活動收入支應。<br>
+      <span class="src">市場定價參考：SMWS 品酒會為會員 800 元／非會員 1,300 元一場。800 元屬合理入門定價，主題性強的場次可拉到 1,200–1,500。</span>
+    </div>
+
+    <h3>年度稀有酒開瓶巡迴</h3>
+    <div class="stats">
+      <div class="stat"><div class="num">60<small>席</small></div><div class="lbl">6 店 × 10 席，單席 2,500 元<br>票收合計 150,000</div></div>
+      <div class="stat"><div class="num">−100,000</div><div class="lbl">酒成本 70,000（2 支 × 35,000）<br>＋巡迴物料與影像 30,000</div></div>
+      <div class="stat"><div class="num">＋50,000</div><div class="lbl">年度淨毛利<br>平均每店約 8,300</div></div>
+    </div>
+    <div class="note">價值不在這五萬元毛利，在於：一年一支全體系共同的話題酒、六場高規格內容素材、以及招商時可以直接秀出的影片。</div>
+  </div>
+
+  <div class="card">
+    <div class="ct">門 市 空 間</div>
+    <h2>三個不可變動的空間核心</h2>
+    <div class="desc">六家店共用，確保品牌在任何一家店得到的呈現規格一致。</div>
+    <div class="dual" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="lane"><div class="ln">C O R E　0 1</div><div class="lt">藏酒牆</div><p>恆溫展示櫃，一進門就看到。品牌旗艦與稀有裝瓶的主展示面，也是門市最主要的攝影背景。</p></div>
+      <div class="lane up"><div class="ln">C O R E　0 2</div><div class="lt">試飲吧台</div><p>單杯試飲的常設舞台。背光、有座位，客人可以坐下來聽完一支酒的故事再決定。</p></div>
+      <div class="lane"><div class="ln">C O R E　0 3</div><div class="lt">開瓶儀式區</div><p>固定的一盞燈、一個角度。每支稀有酒都在同一個位置開瓶、同一個角度拍攝，形成可累積的品牌時刻影像。</p></div>
+    </div>
+    <div class="note">可選延伸模組：品飲長桌／講堂區（16 人，配投影音響）、寄酒櫃私人酒窖、雪茄房（獨立排煙玻璃隔間）、音響黑膠區、佐酒輕食（不設廚房）。<span style="color:var(--gold2)">這些對應第 10 頁「250 萬起至 500 萬」的空間模組差異。</span></div>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源</b>
+    <div class="r"><span class="rn">※</span><span>本頁內容整理自《弘川藏酒閣・品牌通路合作報告（對品牌方）》與《年度行銷制度規劃》v1 草案。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:#f0a58e">所有試算均為結構示意，用酒成本、定價、轉換率皆為假設值</b>，實際數字須以門市進價與營運數據取代後才可對外。原文件中標示「待填」之處（平均客單價、總部進價等）尚未補齊。</span></div>
+  </div>
+</section>
+
+<!-- ========== 08 空間模組 ========== -->
+<section id="s12">
+  <div class="kick">品 牌 ｜ 空 間 模 組 系 統</div>
+  <h1>門市不是貨架，是一個會產生營收的場域</h1>
+  <p class="lead">核心識別由總部統一，體驗模組由加盟主依商圈與自身需求選配——讓這家店除了賺錢，也是他自己想待著的地方。這一頁同時解答第 10 頁「250 萬到 500 萬」的差額到底花在哪。</p>
+
+  <div class="card gold">
+    <div class="ct">品 牌 核 心 · 三 個 不 可 變 動 元 素</div>
+    <h2>模組可以自由選配，這三件事每家店都必須有</h2>
+    <div class="desc">它們是連鎖識別的底線，也是「單杯試飲」能夠成立的物理條件。</div>
+    <div class="dual" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="lane"><div class="ln">T H E　V A U L T</div><div class="lt">藏酒牆</div><p>恆溫展示櫃，進門第一眼。這是<b>「酒即現金」最直接的視覺化</b>，也是加盟主帶朋友來時最有份量的一面牆。總部鋪貨與加盟主自藏可共用同一面牆，視覺一體、系統分離。</p></div>
+      <div class="lane up"><div class="ln">T H E　C O U N T E R</div><div class="lt">試飲吧台</div><p>單杯試飲的舞台。背光酒櫃、固定座位數、專用杯具與注酒器。所有高毛利活動都發生在這裡，因此<b>吧台長度直接決定單場活動的上限人數與收入天花板</b>。</p></div>
+      <div class="lane"><div class="ln">T H E　R I T U A L</div><div class="lt">開瓶儀式區</div><p>固定的一盞燈、一個拍攝角度、一本開瓶登記簿。每支稀有酒在同一個位置開封、記錄第幾支與開瓶人。這是<b>內容產出的工業化</b>，也是三年後抄不走的品牌資產。</p></div>
+    </div>
+    <div class="note gold">
+      <b>視線路徑就是品牌識別。</b>不論選哪一型，這三者的位置關係固定：藏酒牆沿主牆展開、試飲吧台居中成島、開瓶儀式區在最深處收尾。客人一進門的視線是<b>「牆 → 吧台 → 光」</b>。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">五 型 平 面 配 置</div>
+    <h2>同一套品牌基底，五種模組選擇</h2>
+    <div class="desc">平面比例為 1:100 概念示意，尺寸依實際店面調整。</div>
+    <table>
+      <tr><th>型號</th><th>尺寸／坪數</th><th>核心配置</th><th>設計重點與硬條件</th></tr>
+      <tr>
+        <td class="b" style="color:var(--gold3)">A<br>寄酒櫃牆型</td>
+        <td>8.0 × 11.0 m<br>約 26.6 坪</td>
+        <td>藏酒牆 8m ／ 吧台 4.4m 中島 4 席 ／ 寄酒櫃牆 6m 約 48 格</td>
+        <td><b>最基本、也最容易複製的一型。</b>左右兩道牆一邊是總部的貨、一邊是客人的酒，中間留給吧台。不需要特殊層高或排煙，<b>選址彈性最大</b>。取酒動線走右側，不與吧台客人交錯。</td>
+      </tr>
+      <tr>
+        <td class="b">B<br>室內高爾夫型</td>
+        <td>9.0 × 14.0 m<br>約 38 坪</td>
+        <td>藏酒牆 9m ／ 吧台 5.6m 5 席正對球道 ／ 打擊艙 4.0 × 6.3 m 玻璃隔間</td>
+        <td>重點不在高爾夫，而在<b>把營業時間往前拉</b>——球是下午的生意，酒是晚上的生意，同一組租金做兩輪。<span style="color:#f0a58e">硬條件：淨高 3m 以上、深度 6.3m 以上，須確認樓板承重與隔音——這兩項會篩掉大部分店面，選址前要先量。</span></td>
+      </tr>
+      <tr>
+        <td class="b">C<br>招待包廂型</td>
+        <td>9.0 × 13.0 m<br>約 35 坪</td>
+        <td>藏酒牆 5.6m ／ 吧台 5.0m 4 席 ／ 包廂 ×2，各 3.9 × 3.9 m</td>
+        <td>包廂客沿右側直達中央走道，<b>不穿越吧台</b>——談生意的客人要的是隱私，不是被看見。儀式區刻意放在包廂走道口，包廂客出來就會看到開瓶，是最自然的追加銷售觸點。<span style="color:#f0a58e">須定位為「商務會談室」而非娛樂空間，並寫進合約。</span></td>
+      </tr>
+      <tr>
+        <td class="b">D<br>雪茄房型</td>
+        <td>8.0 × 11.0 m<br>約 26.6 坪</td>
+        <td>藏酒牆 8.4m ／ 吧台 4.8m 4 席 ／ 雪茄房 3.0 × 3.0 m 玻璃盒</td>
+        <td>與 A 型同尺寸，用 3 坪換掉部分寄酒櫃。<b>雪茄房是玻璃盒——看得到、聞不到</b>，裡面的人是店裡的活招牌，隔死就浪費了。<span style="color:#f0a58e">須確認獨立排煙工程可行性與菸害防制法對室內吸菸室的規範，簽租約前就要問清楚。</span></td>
+      </tr>
+      <tr>
+        <td class="b">E<br>佐酒吧台型</td>
+        <td>8.0 × 10.0 m<br>約 24 坪</td>
+        <td>藏酒牆 7.6m ／ 吧台 5.0m 4 席＋1 立飲高桌 ／ 備餐檯 5.0 × 0.6 m 無明火</td>
+        <td><b>最小的一型，也是坪效最高的一型。</b>不設廚房不開火，只做火腿起司堅果——目的不是賣吃的，是讓客人多待四十分鐘。備餐檯與吧台背對背，同一名人員可同時操作酒與食物，不需增加人力。</td>
+      </tr>
+    </table>
+    <div class="note">
+      <b>兩條動線是所有型號共通的規則</b>：零售動線（入口 → 收銀，不進吧台區）與體驗動線（入口 → 吧台 → 儀式區）必須分開。買了就走的客人與待兩小時的客人不能互相打擾，否則兩邊都做不好。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">七 個 可 選 體 驗 模 組</div>
+    <h2>每個模組同時回答三件事：佔多少空間、怎麼賺錢、對加盟主本人的價值</h2>
+    <table>
+      <tr><th>模組</th><th>空間</th><th>營收邏輯</th><th>自用價值與備註</th></tr>
+      <tr style="background:#1a1510">
+        <td class="b" style="color:var(--gold3)">寄酒櫃牆<br><span class="tag">高槓桿</span></td>
+        <td>佔牆面不佔地坪<br>建議 24–60 格</td>
+        <td>客人買整瓶寄放店內、掛名牌上鎖。<b>預收現金、鎖定回訪、把一次性交易轉為會員關係</b>，櫃位年費本身即為固定收入。</td>
+        <td>加盟主的私人收藏有了被看見的位置。<br><b>坪效最高的模組</b>——佔的是牆不是地。日本酒吧行之有年，台灣酒專幾乎無人做。續櫃率可作為總部評估單店健康度的指標。</td>
+      </tr>
+      <tr style="background:#1a1510">
+        <td class="b" style="color:var(--gold3)">品飲長桌 · 講堂<br><span class="tag">高槓桿</span></td>
+        <td>6–8 坪<br>12–20 人</td>
+        <td>三層收入：門市自辦單杯試飲場、企業包場、<b>以及品牌方付費使用</b>。</td>
+        <td>談生意、開會、辦私人聚會的正式場合。<br><b>關鍵</b>：總部已握有帝亞吉歐、格蘭父子、保樂力加、愛丁頓等代理與經銷關係，這些品牌每年都有行銷預算在找場地辦品酒會。有長桌，門市就能成為常設據點——<b>等於加盟主的空間被酒商付費使用</b>。</td>
+      </tr>
+      <tr>
+        <td class="b">室內高爾夫</td>
+        <td>5–8 坪<br>需挑高 3m+</td>
+        <td>時段收費＋帶動酒品銷售。最大價值在於它是「白天／傍晚」需求，<b>與酒的夜間需求互補</b>，可把 18:00 才開門的門市往前拉到午後。</td>
+        <td>最直接的一項，也是招商時最有感的賣點。<span style="color:#f0a58e">挑高與樓板承重是選址硬條件，會反過來限制可用店面；設備成本高，需併入總投資試算。</span></td>
+      </tr>
+      <tr>
+        <td class="b">招待包廂</td>
+        <td>4–10 坪／間<br>1–3 間</td>
+        <td>低消制或場地費，搭配開瓶服務。建議定位為<b>「談生意的房間」而非娛樂空間</b>——前者可對企業客戶簽約、可收場地費。</td>
+        <td>加盟主的私人招待所。<span style="color:#f0a58e">娛樂化定位會觸及特種營業、消防與使用分區的法規風險，也會稀釋品牌調性，建議寫進合約做定位限制。</span></td>
+      </tr>
+      <tr>
+        <td class="b">雪茄房</td>
+        <td>2–4 坪<br>需獨立排煙</td>
+        <td>客群與威士忌高度重疊，客單價高。<b>雪茄同樣可單支販售，直接複製單杯試飲的高毛利邏輯</b>，且無開瓶氧化的損耗問題。</td>
+        <td>高。是招待所功能的濃縮版，佔地極小。<span style="color:#f0a58e">排煙工程與菸害防制相關規定須先確認。</span></td>
+      </tr>
+      <tr>
+        <td class="b">音響 · 黑膠區</td>
+        <td>併入吧台區<br>不需獨立坪數</td>
+        <td>不直接產生營收，但延長停留時間與提高單客消費。<b>氛圍投資報酬率最高的一項。</b></td>
+        <td>經驗上，加盟主自用時的滿意度來源常是這個，而不是高爾夫——成本卻低一個量級。與威士忌文化天然契合，是社群內容的穩定素材。</td>
+      </tr>
+      <tr>
+        <td class="b">佐酒吧檯</td>
+        <td>1–2 坪<br>無廚房</td>
+        <td>只做火腿、起司、堅果、巧克力等免烹調品項。拉高客單、延長停留，<b>也是現場供飲的必要配套</b>。</td>
+        <td><span style="color:#f0a58e">是否需另辦餐飲業別登記，須向地方菸酒主管機關確認後再定案。</span></td>
+      </tr>
+    </table>
+    <div class="note gold">所有模組的<b>投資金額目前皆為「待填」</b>，需工程端提供實際級距，才能算出各組合的總投資與回收期。</div>
+  </div>
+
+  <div class="card">
+    <div class="ct">三 種 組 合 建 議</div>
+    <h2>不是七個模組任意勾選，而是三個已經想清楚的組合</h2>
+    <div class="desc">降低加盟主的決策成本，也保住品牌的可辨識度。</div>
+    <table>
+      <tr><th>模組</th><th>A · 精品零售型</th><th>B · 商務招待型</th><th>C · 旗艦型</th></tr>
+      <tr><td class="b">音響黑膠區</td><td style="color:var(--green)">●</td><td style="color:var(--green)">●</td><td style="color:var(--green)">●</td></tr>
+      <tr><td class="b">佐酒吧檯</td><td style="color:var(--mute)">○</td><td style="color:var(--green)">●</td><td style="color:var(--green)">●</td></tr>
+      <tr><td class="b">雪茄房</td><td style="color:var(--dim)">—</td><td style="color:var(--green)">●</td><td style="color:var(--green)">●</td></tr>
+      <tr><td class="b">招待包廂</td><td style="color:var(--dim)">—</td><td style="color:var(--mute)">○ 1 間</td><td style="color:var(--green)">● 2–3 間</td></tr>
+      <tr><td class="b">室內高爾夫</td><td style="color:var(--dim)">—</td><td style="color:var(--mute)">○</td><td style="color:var(--green)">●</td></tr>
+      <tr><td class="b" style="color:var(--gold3)">總投資</td><td style="color:#f0a58e">待填</td><td style="color:#f0a58e">待填</td><td style="color:#f0a58e">待填</td></tr>
+    </table>
+    <span class="src">● 標準配置　○ 可選　— 不含</span>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">三 個 設 計 原 則</div>
+    <div class="q">
+      <div class="qn">壹</div>
+      <div class="qb"><div class="qt">日夜兩張臉，用燈光切換，不用隔間</div>
+      <div class="qd">白天選酒、談事、打球；晚上試飲、招待。同一空間承載兩種營業型態，成本增加有限而營業時數翻倍。<em>現行門市多為 18:00–03:00，等於一半的租金在睡覺</em>；七期朝富店已開午場，這件事應該模組化成標準做法。</div></div>
+    </div>
+    <div class="q">
+      <div class="qn">貳</div>
+      <div class="qb"><div class="qt">動線分流：門口三公尺內要能完成純買賣</div>
+      <div class="qd">買了就走的零售客與待兩小時的體驗客不能互相打擾，否則兩邊都做不好。<em>零售區必須獨立於吧台區的動線之外。</em></div></div>
+    </div>
+    <div class="q">
+      <div class="qn">參</div>
+      <div class="qb"><div class="qt">可被拍優先於可被逛</div>
+      <div class="qd">每個模組都要有一個明確的拍攝點。加盟主的自用需求與社群曝光需求在此重合——<em>他招待朋友時，朋友會自己發文</em>。這是零成本的行銷通路。</div></div>
+    </div>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源 與 待 確 認 事 項</b>
+    <div class="r"><span class="rn">※</span><span>本頁整理自《弘川藏酒閣・空間模組系統 v1》與《五型平面配置圖 v1》。平面為概念示意，非施工圖，尺寸須依實際店面與法規複核。</span></div>
+    <div class="r"><span class="rn">1</span><span><b style="color:var(--mute)">現場供飲的法規定位</b>：酒類零售本身免申請許可執照，辦妥營利事業登記與營業稅籍登記即可。但「收費供人於店內飲用」是否需另辦餐飲業別登記，公開資料未明確，須向地方菸酒主管機關函詢確認。<b style="color:#f0a58e">這題沒答案，整套單杯試飲的合法性就懸著。</b></span></div>
+    <div class="r"><span class="rn">2</span><span><b style="color:var(--mute)">各模組的實際投資級距</b>：需工程端提供，才能算出各組合的總投資與回收期。</span></div>
+    <div class="r"><span class="rn">3</span><span><b style="color:var(--mute)">加盟主自用與營業的界線</b>：需訂出最低營運標準（營業時數、活動場次、進貨門檻），避免門市實質變成私人招待所而稀釋品牌。</span></div>
+    <div class="r"><span class="rn">4</span><span><b style="color:var(--mute)">模組是否可後加</b>：建議預留管線與結構條件，讓加盟主先開 A 型、營運穩定後升級 B 型——這會顯著降低簽約門檻。</span></div>
+  </div>
+</section>
+
+<!-- ========== 09 行銷制度 ========== -->
+<section id="s11">
+  <div class="kick">加 盟 支 援 ｜ 年 度 行 銷 制 度</div>
+  <h1>賣的是制度，不是活動</h1>
+  <p class="lead">加盟主怕的不是沒有活動，是「我不會做行銷」。招商文件上寫「總部提供完整行銷支援」已經沒有人相信了——要換成一張可以驗收的清單。</p>
+
+  <div class="card">
+    <div class="ct">同 一 件 事 ， 兩 種 說 法</div>
+    <div class="dual">
+      <div class="lane">
+        <div class="ln">一 般 加 盟 總 部 說 的</div>
+        <div class="lt" style="color:var(--mute2)">無法驗收</div>
+        <p style="line-height:2.1">・提供完整行銷支援<br>・不定期舉辦品酒活動<br>・協助社群經營<br>・總部統一形象廣告</p>
+        <div style="margin-top:12px;font-size:12.5px;color:var(--red)">問題：無法量化，加盟主聽完不知道自己要做什麼。</div>
+      </div>
+      <div class="lane up">
+        <div class="ln">弘 川 要 說 的</div>
+        <div class="lt">可以驗收</div>
+        <p style="line-height:2.1">・<b>每月 1 號</b>，活動包寄到店裡，拆開就能辦<br>・<b>每月 1 場</b>主題品飲會，收費、有名額、自負盈虧且有毛利<br>・<b>每年 1 次</b>稀有酒開瓶巡迴，六店輪辦——單店做不到<br>・<b>現金行銷支出每月 1 萬</b>，其餘由活動收入與酒商資源支應</p>
+      </div>
+    </div>
+    <div class="punch">
+      「你辦活動用的酒和講師，大部分不是你出錢——是酒商出。<br>
+      <span>因為總部拿得到，你自己開一家店拿不到。」</span>
+    </div>
+    <div class="note gold">這句話同時回答了「為什麼要加盟而不是自己開」與「行銷是不是很花錢」兩個最常見的異議。<b>前提是總部真的談下酒商資源。</b></div>
+  </div>
+
+  <div class="card">
+    <div class="ct">為 什 麼 一 定 要 制 度 化</div>
+    <table>
+      <tr><th>理由</th><th>說明</th></tr>
+      <tr><td class="b">加盟主的能力落差</td><td>高單價加盟主多半是老闆或投資型店東，本身不是行銷人。制度化才能讓六家店的活動品質一致，否則<b>品牌形象由最弱的那家店決定</b>。</td></tr>
+      <tr><td class="b">試飲會就是招商會</td><td>喝得起單杯稀有酒的客人，輪廓跟目標加盟主高度重疊（有資本、愛酒、有生意人脈）。<b>喝過三次的熟客，比看過廣告的陌生人好談十倍</b>——這是獨特且低成本的招商漏斗。</td></tr>
+      <tr><td class="b">內容資產會複利</td><td>每場活動產出的照片、影片、開瓶登記簿，三年後就是別人抄不走的品牌資產。前提是格式統一、由總部集中收攏，而不是各店各拍各的。</td></tr>
+    </table>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">對 酒 商 的 合 作 提 案</div>
+    <h2>四個層級，可獨立採用也可逐年往上</h2>
+    <div class="desc">這是「酒商出酒出講師」能否成立的關鍵——弘川拿什麼跟酒商換。</div>
+    <table>
+      <tr><th>層級</th><th>品牌投入</th><th>弘川回報</th><th>適合的品牌</th></tr>
+      <tr>
+        <td class="b">TIER 1<br>常態單杯席位</td>
+        <td>每季提供行銷用酒 N 瓶（樣品酒或行銷專案價）、品項專業資料與風味說明</td>
+        <td>六店常態酒單固定席位（保證輪替期間不下架）、專屬酒卡、吧台品牌露出、品飲墊具名、每月回報試飲杯數與轉換率</td>
+        <td>想測試新品市場反應、或想打開既有高價品項</td>
+      </tr>
+      <tr>
+        <td class="b">TIER 2<br>月度主題場合辦</td>
+        <td>提供該場次 6 款用酒、指派講師或提供講稿、活動物料或贈品（選配）</td>
+        <td>年度日曆整月主題冠名（六店同步）、16 席品飲會現場即可成交、活動影像授權、到場名單與現場成交明細、社群同步曝光</td>
+        <td>年度有明確主推品項、需深度教育消費者</td>
+      </tr>
+      <tr>
+        <td class="b">TIER 3<br>品牌大使駐點</td>
+        <td>品牌大使／講師駐點（每季 1–2 次）、六店店員產品訓練與認證</td>
+        <td>全體系店員受訓形成穩定的第一線推薦力、店內主推位陳列、訓練後推薦成效追蹤、駐點場次完整內容素材</td>
+        <td>品項複雜、需專業敘事才賣得動（單一麥芽、干邑、稀有裝瓶）</td>
+      </tr>
+      <tr style="background:#1a1510">
+        <td class="b" style="color:var(--gold3)">TIER 4<br>弘川專屬單桶</td>
+        <td>開放選桶或限定裝瓶配額、聯名標籤與包裝授權</td>
+        <td><b>整桶包銷，品牌零庫存風險</b>、全通路獨賣的話題與媒體露出、選桶過程完整紀錄、一支專屬酒可支撐整年敘事</td>
+        <td>最高層級，長期綁定</td>
+      </tr>
+    </table>
+    <div class="note gold">
+      <b>對酒商最有力的一句</b>：酒展的觸及是<b>一年三天</b>，弘川的觸及是<b>一年 365 天，每天晚上六點到凌晨三點</b>，而且客人喝完可以立刻把整瓶帶走。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">品 牌 方 的 三 個 難 題 ─ ─ 這 是 談 判 籌 碼</div>
+    <p><b>難題一｜高價品項的「試飲斷層」</b>　三千元以上的酒，消費者沒喝過就不會買；但要喝到，必須先買一整瓶。這個循環讓優秀的高價品項卡在架上，最後只能靠折扣出清——傷的是品牌長期定價。<span style="color:var(--gold2)">單杯試飲把試錯成本從「一瓶」降到「一杯」。</span></p>
+    <p><b>難題二｜品酒會辦完就散，沒有銷售閉環</b>　場地多半在餐廳或飯店，現場不能賣酒，客人回家後熱度已退。活動報告只能交出照片與到場人數，交不出銷售歸因。<span style="color:var(--gold2)">在弘川，品飲會結束前的最後 15 分鐘就是成交時間。</span></p>
+    <p><b>難題三｜通路只回報出貨，不回報消費者</b>　品牌知道賣了幾箱，卻不知道是誰喝、為什麼選、有沒有回購、跟哪支競品同時被考慮。<span style="color:var(--gold2)">弘川承諾提供標準化的消費者端月報——這在台灣酒類零售通路是罕見的。</span></p>
+  </div>
+
+  <div class="card">
+    <div class="ct">總 部 必 須 建 置 的 十 個 環 節</div>
+    <h2>但只有三項是「沒有就無法啟動」</h2>
+    <div class="desc">開口就要十項系統，總部第一個反應是「這要花多少錢」。先鎖定三項，其餘明確說可以先用土法替代。</div>
+    <table>
+      <tr><th>#</th><th>環節</th><th>沒有的話會怎樣</th><th>優先度</th></tr>
+      <tr style="background:#1c1310">
+        <td class="b">7</td><td class="b" style="color:#f0a58e">POS 單杯計次</td>
+        <td>整套制度的地基崩掉——沒有數據就沒有月報，也談不到酒商資源</td>
+        <td><span class="tag" style="background:#2a1414;border-color:#5c2828;color:#e8735a">必要</span></td>
+      </tr>
+      <tr style="background:#1c1310">
+        <td class="b">5</td><td class="b" style="color:#f0a58e">統一活動報名頁</td>
+        <td>六店名單拼不起來，無法跨店經營會員，也交不出到場統計</td>
+        <td><span class="tag" style="background:#2a1414;border-color:#5c2828;color:#e8735a">必要</span></td>
+      </tr>
+      <tr style="background:#1c1310">
+        <td class="b">10</td><td class="b" style="color:#f0a58e">酒商關係窗口</td>
+        <td>各店各談，資源混亂、與競品混陳，品牌方不願意深談</td>
+        <td><span class="tag" style="background:#2a1414;border-color:#5c2828;color:#e8735a">必要</span></td>
+      </tr>
+      <tr><td>1</td><td>內容中心（貼文圖、短影音、文案與警語版本）</td><td>退回成「加盟主自己想辦法」，招商時講不出「你不用自己做行銷」</td><td><span class="tag">次要</span></td></tr>
+      <tr><td>2</td><td>活動包產製（酒卡、品飲墊、海報）</td><td>活動辦得出來但沒有質感，撐不起高單價的精品定位</td><td><span class="tag">次要</span></td></tr>
+      <tr><td>3</td><td>每月配送到店</td><td>變成「請自行下載列印」，執行率明顯下滑</td><td><span class="tag">次要</span></td></tr>
+      <tr><td>9</td><td>成效回報表</td><td>總部不知道哪家店有執行，制度無法管理也無法驗收</td><td><span class="tag">次要</span></td></tr>
+      <tr><td>4</td><td>廣告投放代操</td><td>六店各自投放，單價高、成效無法橫向比較</td><td><span class="tag" style="color:var(--mute)">可延後</span></td></tr>
+      <tr><td>6</td><td>LINE 分眾群發</td><td>只能無差別群發，打擾客人又沒效果，封鎖率上升</td><td><span class="tag" style="color:var(--mute)">可延後</span></td></tr>
+      <tr><td>8</td><td>會員 CRM 跨店</td><td>六家店變成六個獨立品牌，跨店集章與巡迴活動做不起來</td><td><span class="tag" style="color:var(--mute)">可延後</span></td></tr>
+    </table>
+    <div class="note warn">
+      <b>整張架構圖的地基是第 7 項：POS 能不能一杯一杯出單。</b><br>
+      沒有試飲杯數 → 沒有轉換率 → 交不出月報 → 談不到酒商資源 → 「你的活動用酒不是你出錢」這句招商論述就<b>不成立</b>。<br>
+      <span style="color:var(--gold2)">其他九項都可以先用土法煉鋼替代，只有這一項不行。</span>
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">與 總 部 開 會 的 三 個 建 議</div>
+    <div class="q">
+      <div class="qn">1</div>
+      <div class="qb"><div class="qt">倒著講，不要正著講</div>
+      <div class="qd">不要從「我想做行銷活動」開始。<em>從架構圖右下角那兩個產出講起</em>——月報能換到酒商的用酒與講師、成效報表能拿去招商——再往回推說要拿到這兩樣，最低限度得先有 POS 單杯計次。總部聽到的就會是投資報酬，不是又一筆行銷開銷。</div></div>
+    </div>
+    <div class="q">
+      <div class="qn">2</div>
+      <div class="qb"><div class="qt">先要三樣，不要一次要十樣</div>
+      <div class="qd">只鎖定第 <em>7、5、10</em> 三項，其餘七項明確說可以先用土法（試算表、紙本護照、各店現有帳號）替代，等試辦一季有數據再談。</div></div>
+    </div>
+    <div class="q">
+      <div class="qn">3</div>
+      <div class="qb"><div class="qt">帶一個試辦提案進場</div>
+      <div class="qd"><em>「一家店、一個品項、一季」</em>——這個規模對總部幾乎沒有決策成本。用試辦跑出第一份月報，之後所有的資源要求都變成有憑有據，而不是在紙上爭論。</div></div>
+    </div>
+    <div class="note gold">
+      <b>會議後要帶走的三個答案</b>：① POS 改不改得動、要多久、要多少錢　② 統一報名後台由誰建、什麼時候能上　③ 酒商由誰去談、排他條款總部同不同意
+    </div>
+  </div>
+
+  <div class="refs">
+    <b>資 料 來 源 與 法 規 提 醒</b>
+    <div class="r"><span class="rn">※</span><span>本頁整理自《年度行銷制度規劃》v1 草案、《通路行銷合作提案（對酒商）》v1、《行銷制度架構圖與總部確認清單》v1。</span></div>
+    <div class="r"><span class="rn">※</span><span><b style="color:#f0a58e">法規紅線</b>：所有對外行銷素材須依《菸酒管理法》第 37 條標示「禁止酒駕」及「飲酒過量，有害健康」警語，違反者處新臺幣 10 萬元以上 50 萬元以下罰鍰。</span></div>
+    <div class="r"><span class="rn">※</span><span>原文件多處標示「待填」（平均客單價、總部進價、報價金額），對外使用前須以實際數據取代。</span></div>
+  </div>
+</section>
+
+<!-- ========== 09 加盟主 ========== -->
+<section id="s6">
+  <div class="kick">加 盟 主 ｜ 他 看 到 什 麼</div>
+  <h1>到這裡，他要處理的只剩「我做不做得來」</h1>
+  <p class="lead">前面兩層站穩之後，這一段才談錢。結構是固定的：一份動態損益表當客觀骨架，外面包一個對準這個品牌強項的情緒鉤子。</p>
+
+  <div class="card">
+    <div class="ct">投 資 結 構</div>
+    <h2>250 萬 － 500 萬，模組化</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">250<small>萬起</small></div><div class="lbl">基礎模組 ＋ 首批進貨</div></div>
+      <div class="stat"><div class="num">500<small>萬</small></div><div class="lbl">加上其他空間模組<br>依商圈規模擴充</div></div>
+    </div>
+    <div class="note gold">
+      <b>這裡必須接住第二段的三千萬。</b>對方腦中一定會冒出「那三千萬跟這 250 萬是什麼關係」。主動回答，這個落差就從破綻變成武器——<b>那三千萬弘川已經先付了，你付的是入場的門票，不是蓋這棟樓的錢。</b>
+    </div>
+  </div>
+
+  <div class="card gold">
+    <div class="ct">主 要 情 緒 鉤 子</div>
+    <h2>風險保值：酒本身就是可回收的現金</h2>
+    <p>多數人對加盟最大的顧慮從來不是「要投多少」，而是<b>「萬一賣不掉，這筆錢是不是就卡死了」</b>。</p>
+    <p>弘川把這個風險直接拿掉——店裡的庫存不是沉沒成本，而是可以變現的資產，<b>總部以當初進價回收滯銷酒款</b>。換句話說，投入的每一分錢，都留著一條隨時可以轉回現金的退路。</p>
+    <div class="note warn">
+      <b>⚠ 這一點會被挑戰，必須先準備好答案。</b>2025 年台灣通路端普遍面臨庫存積壓（見第 03 頁），做過功課的加盟主會問：「市場在跌，總部憑什麼還敢承諾原價回收？」<br>
+      <span style="color:var(--gold2)">反守為攻的方向：敢在修正期做這個承諾，正好證明總部有現金部位與去化能力——這是別人學不來的，也是為什麼獨立店在這種時候會倒、而弘川不會。</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">輔 助 鉤 子</div>
+    <h2>經營效率：不必懂酒，也做得起來</h2>
+    <p>先安心，再有信心——風險保值消除「怕賠」，經營效率補上「我做得來」。標準化後台系統、新人訓練教材與考核制度、多店已驗證的複製模型，都是這一層的證據。</p>
+  </div>
+
+  <div class="card">
+    <div class="ct">尚 未 完 成</div>
+    <h2>動態損益表</h2>
+    <div class="desc">這是加盟主段落的客觀骨架，目前缺數字，無法產出。</div>
+    <div class="note">
+      需要以下資料才能建立：<br>
+      ・預估月營收或坪效<br>
+      ・商品毛利率（可分品類）<br>
+      ・固定月費用：房租、人事、總部管理費或抽成<br>
+      ・首批進貨金額與周轉週期<br>
+      <span style="color:var(--gold2)">→ 有了這些，才能算出回本期，也才能把「250 萬」從一個數字變成一門看得懂的生意。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 09 QA 蒐集表 ========== -->
+<section id="s9">
+  <div class="kick">Q A ｜ 加 盟 常 見 問 題</div>
+  <h1>品牌方回答蒐集表</h1>
+  <p class="lead">這是加盟主一定會問、而且問不到答案就不會簽約的題目。標<span style="color:var(--red);font-weight:700">▲</span>的是關鍵題——沒有答案，前面那三段故事講得再好，銷售都會停在這裡。灰字是給品牌方的填寫建議。</p>
+
+  <div class="card gold" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:16px;font-weight:700;color:var(--gold3);margin-bottom:4px">要實際填寫答案，請用互動版表單</div>
+      <div style="font-size:13px;color:var(--mute)">可逐題輸入、自動存檔、匯出彙整結果</div>
+    </div>
+    <a href="/" style="background:var(--gold);color:#12100d;font-weight:800;font-size:14px;
+       padding:11px 22px;border-radius:8px;text-decoration:none;white-space:nowrap">開啟填寫表單 →</a>
+  </div>
+
+  <div class="card" style="padding:20px 24px;display:flex;gap:26px;flex-wrap:wrap">
+    <div><span style="font-size:24px;font-weight:800;color:var(--cream)" id="qaTotal">—</span>
+      <span style="font-size:12.5px;color:var(--mute);margin-left:6px">題總計</span></div>
+    <div><span style="font-size:24px;font-weight:800;color:var(--red)" id="qaKey">—</span>
+      <span style="font-size:12.5px;color:var(--mute);margin-left:6px">關鍵題</span></div>
+    <div><span style="font-size:24px;font-weight:800;color:var(--gold2)">7</span>
+      <span style="font-size:12.5px;color:var(--mute);margin-left:6px">大類</span></div>
+  </div>
+
+  <div id="qaWrap"></div>
+
+  <div class="card">
+    <div class="ct">與 前 面 幾 頁 的 對 應</div>
+    <h2>這份表單其實是在補故事的第三段</h2>
+    <p>前面第 01 頁的三段主軸中，第三段是「門檻沒有降低，但門是從裡面幫你打開的」。這一段要成立，靠的不是文案，是<b>這 40 題有沒有答案</b>。</p>
+    <p>特別是「獲利模式與貨源」那一區——那是弘川最強的資產，也是唯一能撐住加盟金的理由。第 06 頁講五大酒商簽約，這裡問的就是：<b>那個簽約，實際上讓加盟主的進價低多少？能不能拿出價目表？</b></p>
+    <div class="note warn">
+      <b>⚠ 數字一致性提醒</b>：這份表單以「加盟金 66 萬、裝潢另計」為前提；本簡報第 10 頁寫的是「基礎模組＋首批進貨約 250 萬起、含空間模組至 500 萬」。兩者應該是包含關係（66 萬是 250 萬的其中一項），<b>但對外講法必須先統一</b>，否則加盟主會發現前後兜不攏。
+    </div>
+  </div>
+</section>
+
+<!-- ========== 待討論 ========== -->
+<section id="s7">
+  <div class="kick">待 討 論</div>
+  <h1>需要創辦人拍板的事</h1>
+  <p class="lead">以下依重要性排序。前三題會影響整套故事能不能成立，後面幾題影響簡報的做法與資料強度。</p>
+
+  <div class="card gold">
+    <div class="ct">A ｜ 論 述 的 生 死 題</div>
+    <div class="q">
+      <div class="qn">1</div>
+      <div class="qb">
+        <div class="qt">大玩家都不開放加盟，弘川為什麼敢開放？</div>
+        <div class="qd">這是整套故事最強的論點自己帶出來的反問。第 04 頁一講完「他們不需要你」，加盟主腦中立刻會冒出「那你為什麼需要我」。<br><em>答案若說不通，這一頁會反過來咬人；答案說得通，它就是全篇最有力的一段。</em>目前推測的方向是：總部承接庫存風險，讓加盟主成為通路的延伸而非失控的節點——但這需要創辦人確認真正的策略意圖。</div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">2</div>
+      <div class="qb">
+        <div class="qt">市場在修正期，回收機制的底氣在哪？</div>
+        <div class="qd">2025 年台灣威士忌出口額跌 22%、通路庫存積壓是公開資訊；同年 Whiskystats 威士忌指數全年下跌 9.8%，麥卡倫拍賣跌幅約 11%。<br><em>條件不清時，市價下修的風險會全部壓在總部。</em>回收條款必須載明四件事：未開封、原箱原況、回收價基準、可回收比例上限。<b style="color:var(--gold2)">條款寫得越具體，加盟主反而越信</b>——模糊的「全數回收」聽起來像空頭支票。<br>另需創辦人說明總部的去化管道，這件事講清楚，回收機制就從「聽起來很好但有點可疑」變成「只有弘川做得到」。</div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">3</div>
+      <div class="qb">
+        <div class="qt">「三千萬簽約門檻」這個數字可以公開講嗎？</div>
+        <div class="qd">它是整套故事最聳動的一擊，但講了就必須接住 250 萬的落差。<br><em>需要確認：這個數字的來源與精確度，以及對外講出來會不會影響與酒商的關係。</em></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">4</div>
+      <div class="qb">
+        <div class="qt">POS 能不能一杯一杯出單？</div>
+        <div class="qd">這是單杯試飲整套制度的地基（見第 09 頁）。沒有試飲杯數 → 沒有轉換率 → 交不出月報 → 談不到酒商資源 → 「你辦活動的酒不是你出錢」這句招商論述就不成立。<br><em>要帶走的答案：改不改得動、要多久、要多少錢。</em>另外兩項必要環節是統一報名後台由誰建，以及酒商由誰去談、排他條款總部同不同意。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">B ｜ 講 法 與 執 行 的 選 擇</div>
+    <div class="q">
+      <div class="qn">5</div>
+      <div class="qb">
+        <div class="qt">四家同業要直接點名嗎？</div>
+        <div class="qd">直接寫出國泰、酒條通、橡木桶、品酒網最有衝擊力，但也可能踩到同業。替代做法是寫成「國內前四大酒商通路」不指名。<em>兩種都可行，看創辦人對同業關係的判斷。</em></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">6</div>
+      <div class="qb">
+        <div class="qt">三句主標的修正版採用哪一版？</div>
+        <div class="qd">見第 01 頁。三個修正分別是：第一句改成「不是沒人知道這行賺錢，是沒人知道這行輪得到你」、三千萬要不要自己接住、第三句改成「門是從裡面幫你打開的」。<em>可以全採、部分採或都不採。</em></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">7</div>
+      <div class="qb">
+        <div class="qt">商圈保障範圍怎麼畫？</div>
+        <div class="qd">台中已有五店一倉，而利百加、京旺、茂林在地連鎖合計逾二十店，密度全台之冠。<em>加盟主第一個懷疑的就是「總部會不會在我隔壁再開一家」。</em>建議用行政區或幹道畫死保障範圍並寫進合約——但實際要怎麼畫，需要創辦人決定。這件事會直接影響第三段的可信度。</div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">8</div>
+      <div class="qb">
+        <div class="qt">展店順序認同桃園優先嗎？</div>
+        <div class="qd">依九縣市掃描結果，桃園是「加密戰」與「空白戰」的重疊點——234 萬人、連鎖幾乎零佈局、需求已被獨立量販店驗證、弘川又已有倉庫。<em>需要創辦人確認這與總部實際的展店規劃是否一致</em>，招商簡報才能講得有底氣。</div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">9</div>
+      <div class="qb">
+        <div class="qt">簡報的使用情境是什麼？</div>
+        <div class="qd">當面講（頁面少字、大字，靠口說撐）還是寄給對方自己看（需要完整文字說明）？<em>這會決定每一頁的字量，差很多。</em>另外，三句＝三頁，還是每句展開 2–3 頁？</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">C ｜ 資 料 補 齊</div>
+    <div class="q">
+      <div class="qn">10</div>
+      <div class="qb">
+        <div class="qt">動態損益表的數字</div>
+        <div class="qd">月營收或坪效、商品毛利率、固定月費用（房租／人事／總部費用）、首批進貨金額與周轉週期。<em>沒有這些，加盟主段落只有情緒沒有骨架。</em></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">11</div>
+      <div class="qb">
+        <div class="qt">弘川實際的營收結構</div>
+        <div class="qd">禮盒／收藏款占營收比重、各客群客單價、B2B（餐飲叫貨）占比。<em>有了真數據，第 02 頁的客單價階梯就能從示意圖變成真實證據，抗提問能力完全不同。</em></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">12</div>
+      <div class="qb">
+        <div class="qt">全台菸酒零售業普查</div>
+        <div class="qd">目前九縣市資料來自 Google 地圖，是可見度較高的店而非普查，鄉鎮低估嚴重。<em>可用財政部「全國營業稅籍登記資料集」篩菸酒零售業別代碼做全台普查</em>，才能把 120–180 家的估算變成董事會可用的數字。</div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qn">13</div>
+      <div class="qb">
+        <div class="qt">配額可攜性</div>
+        <div class="qd">加盟主在不同縣市開店，代理商的配額與品項供應規則是否一致？<em>這決定「一開店就有八家代理商帳號」這個賣點在各地是否等值</em>，也影響空白市場的說服力。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">下 一 步</div>
+    <p>方向確認之後的順序是：<b>①</b> 補齊 A 組三個答案 → <b>②</b> 定案三句講法 → <b>③</b> 拿到損益數字 → <b>④</b> 展開完整文案 → <b>⑤</b> 製作正式簡報。</p>
+    <p style="color:var(--mute)">目前這份文件屬於探索與方向確認階段，尚未收斂成對外文案。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  弘川藏酒閣 品牌故事介紹　｜　內部討論用，非對外招商文件<br>
+  所有數據均標註來源與查證日期（2026 年 8 月），示意性圖表已於頁面內註明性質。正式對外前建議重新核對時效性資料。
+</footer>
+
+<script>
+var QA = [
+{t:"加盟金相關", note:"客戶第一個念頭：這筆錢買到什麼", qs:[
+ {q:"這 66 萬的細項怎麼拆？教育訓練佔多少、品牌授權佔多少？有沒有書面明細可以看？", h:"最好能列出一張表：訓練 X 萬、授權 X 萬、開辦行政 X 萬……加總 66 萬。", f:1},
+ {q:"品牌授權是幾年？到期要不要再付一次？續約金多少？", h:"寫明年限與續約條件（免費續約／打折／重新收費）。"},
+ {q:"教育訓練是幾天、幾人、在哪裡上課？含不含住宿交通？多帶一位店長要不要加錢？", h:"天數、地點、名額上限、課表大綱。"},
+ {q:"訓練結束後的後續支援呢？複訓、新品訓練、線上教材是否另外收費？", h:"說明是一次性還是持續性支援。"},
+ {q:"66 萬裡面有沒有含首批進貨、招牌、POS 系統、生財器具？", h:"請直接條列「含什麼」與「不含什麼」。不含的部分講清楚，反而比較有說服力。", f:1},
+ {q:"如果最後沒開成（找不到店面、租約談不攏、菸酒執照沒下來），66 萬退不退？退多少？截止時間點是什麼時候？", h:"退費級距與時間點，越明確越能降低客戶下訂的心理門檻。", f:1},
+ {q:"為什麼是 66 萬？同業有的只要 20–30 萬甚至零加盟金，我多付的差額換到什麼？", h:"這題是價值論述題，建議寫 3 個「別人給不了」的具體項目（例如原廠簽約、配額、選品能力）。", f:1}]},
+{t:"裝潢另計的相關疑慮", note:"金額不透明 ＝ 最大信任破口", qs:[
+ {q:"「會根據組裝內容不同」——最低配到最高配的實際區間是多少？能不能給 A／B／C 三個級距的數字？", h:"例如：基礎型 XX 萬（X 坪）／標準型 XX 萬／旗艦型 XX 萬。沒有數字，這場銷售通常就停在這裡。", f:1},
+ {q:"有沒有已開幕門市的實際裝潢報價單可以參考？坪數怎麼對應費用（每坪大約多少）？", h:"提供 1–2 家實例（可隱去店名）。"},
+ {q:"一定要用總部指定的工班與設備商嗎？我自己找認識的統包可不可以？", h:"若必須指定，說明理由（品牌一致性／保固／驗收標準）。"},
+ {q:"如果必須用指定廠商，總部有沒有從中抽成或賺價差？", h:"客戶不一定敢直接問，但一定會想。建議主動說明，坦白反而加分。", f:1},
+ {q:"恆溫酒櫃、雪茄保濕櫃、冷藏設備是買斷還是租賃？保固多久？故障誰負責？", h:"列出主要設備清單、單價區間、保固年限與維修窗口。"},
+ {q:"哪些是「品牌形象必要項目」（招牌、燈光、主視覺牆），哪些是我可以自己決定省錢的？", h:"畫出必要／彈性的界線，讓客戶感覺有控制權。"},
+ {q:"既有店面轉加盟、或原本就是酒行想改招牌，可以沿用原有裝潢嗎？費用怎麼折算？", h:"轉加盟方案通常是重要的成交切入點，建議寫清楚。"},
+ {q:"合約到期或不續約時，裝潢與設備歸誰？要不要拆招牌、恢復原狀？費用由誰負擔？", h:"退場條件寫清楚，客戶才敢進場。"}]},
+{t:"總投資金額與回本", note:"客戶回家一定會用計算機算一遍", qs:[
+ {q:"含加盟金＋裝潢＋租金押金＋首批酒＋周轉金，開一家店的完整總額大約多少？", h:"給一個全含的區間（例如 XXX ～ XXX 萬），並附上組成明細。", f:1},
+ {q:"首批進貨要壓多少錢？酒類單價高，庫存等於現金卡住——有沒有寄售、鋪貨、月結或退換貨機制？", h:"這是酒品零售最痛的點，若有付款條件優惠請務必寫出來。", f:1},
+ {q:"現有加盟店的平均月營業額、毛利率、淨利率各是多少？最好的和最差的分別是多少？", h:"能給區間就給區間。只講平均值、不講最差值，客戶會自行往壞處想。", f:1},
+ {q:"回本期抓多久？這個數字是根據幾家店的實際數據算出來的？", h:"標明樣本數與統計期間，數字才站得住。"},
+ {q:"開幕前三個月我要準備多少周轉金才不會斷氣？", h:"建議給一個具體的最低現金水位建議。"}]},
+{t:"獲利模式與貨源", note:"弘川最強的資產在這一區", qs:[
+ {q:"弘川與帝亞吉歐、保樂利加、格蘭父子、寰盛艾丁頓、酩悅軒尼詩等原廠的簽約，讓加盟主的進價真的比市場行情低嗎？大約低多少？可以看實際價目表嗎？", h:"這是 66 萬最有力的支撐點，建議用 2–3 支熱門酒款的實際價差舉例。", f:1},
+ {q:"熱門稀缺品項（山崎、響、麥卡倫、百富）的配額怎麼分配？直營店會不會優先拿？", h:"說明分配原則，避免客戶擔心「好貨都被總部吃掉」。"},
+ {q:"我可以自己找其他管道進貨嗎？還是所有品項都必須向總部叫貨？", h:"寫明強制品項與自由品項的比例或範圍。"},
+ {q:"除了洋酒，菸品、雪茄、啤酒、葡萄酒、周邊配件的毛利結構分別是什麼？哪一塊才是真正賺錢的？", h:"用毛利率把「賺錢引擎」講清楚，這是專業度的展現。"},
+ {q:"叫貨價會不會浮動？原廠漲價時我能不能反映到售價？售價是我決定還是總部決定？", h:"說明定價權歸屬與調價機制。"}]},
+{t:"持續性費用", note:"客戶最怕的是「之後還有沒有錢要付」", qs:[
+ {q:"每月權利金／管理費怎麼收？固定金額還是抽營業額百分比？", h:"金額或％數，以及起算時間點。"},
+ {q:"要不要分攤廣告行銷基金？攤多少、怎麼使用、看不看得到成效報告？", h:"若有，說明用途與回饋方式。"},
+ {q:"POS／進銷存系統費、年度訓練費、保證金——還有哪些每年會再出現的費用？", h:"請一次列完所有經常性支出，避免日後爭議。", f:1},
+ {q:"保證金要多少？什麼情況會被扣？退場時多久退還？", h:"金額、扣款條件、退還時程。"}]},
+{t:"商圈保障與市場競爭", note:"決定客戶敢不敢投第二家", qs:[
+ {q:"有沒有商圈保障？半徑幾公里內不再開第二家？這個限制包含直營店嗎？", h:"寫明保障範圍與是否含直營、含電商。", f:1},
+ {q:"選址是總部評估還是我自己找？會不會給我書面評估報告？如果評估錯了誰負責？", h:"說明選址流程與總部承擔的角色。"},
+ {q:"隔壁就有量販、Costco、電商在殺價，我的價格打得贏嗎？品牌能給我什麼「非價格」的競爭力？", h:"建議從選品、稀有品項、專業服務、雪茄與客製化服務等角度回答。", f:1},
+ {q:"總部有沒有自營的電商或直營門市？會不會跟加盟店搶同一批客人？", h:"若有，說明線上線下的分工與利益分配。"}]},
+{t:"合約條款與退場機制", note:"客戶會拿去給律師或家人看", qs:[
+ {q:"合約年限幾年？中途想結束怎麼辦？違約金怎麼計算？", h:"年限、提前終止條件、違約金公式。"},
+ {q:"經營不善想把店轉讓給別人，總部同意嗎？要不要再收一次加盟金？", h:"轉讓流程與費用。"},
+ {q:"總部可以單方面終止合約的條件有哪些？", h:"逐條列出，避免客戶產生「被養套殺」的疑慮。"},
+ {q:"品牌如果出事（食安、稅務、負面新聞），我的損失由誰承擔？", h:"說明品牌方的責任範圍與危機處理機制。"},
+ {q:"我可以先跟現有的加盟主聊聊嗎？能不能給我 2～3 家的聯絡方式？", h:"敢不敢開放，本身就是最強的信任訊號。建議事先徵得 2–3 位配合的加盟主同意。", f:1}]},
+{t:"經營現實面", note:"專業門檻高，這區決定客戶敢不敢下手", qs:[
+ {q:"目前總共幾家店？開了幾年？這幾年收掉幾家？收掉的原因是什麼？", h:"存活率與收店原因，坦白說明反而能建立可信度。", f:1},
+ {q:"菸酒零售業許可執照、營業登記由誰處理？大約多久核發？沒過怎麼辦？", h:"流程、時程、總部協助範圍。"},
+ {q:"我需要親自顧店嗎？可不可以純投資找店長經營？總部支不支援徵人與店長培訓？", h:"說明是否接受純投資型加盟。"},
+ {q:"開幕後總部多久來輔導一次？督導具體做什麼？出狀況時多快有人回應？", h:"寫明巡店頻率與聯絡窗口。"},
+ {q:"酒品專業門檻高（威士忌、葡萄酒、雪茄），我沒有背景做得起來嗎？客人問我我答不出來怎麼辦？", h:"可帶出教育訓練體系、考題制度、線上查詢工具等具體做法。", f:1}]}
+];
+
+(function(){
+  var esc = function(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); };
+  var wrap = document.getElementById('qaWrap');
+  if(!wrap) return;
+  var total=0, key=0, html='';
+  QA.forEach(function(sec){
+    html += '<div class="card"><div class="ct">'+esc(sec.t)+'</div>'
+          + '<div class="desc" style="margin-bottom:14px">'+esc(sec.note)+'</div>';
+    sec.qs.forEach(function(o){
+      total++; if(o.f) key++;
+      html += '<div class="q" style="padding:15px 0"><div class="qn" style="'
+            + (o.f ? 'border-color:#5c2828;color:#e8735a' : '')
+            + '">'+(o.f?'▲':'·')+'</div><div class="qb">'
+            + '<div class="qt" style="font-size:15px;line-height:1.6">'+esc(o.q)+'</div>'
+            + '<div class="qd" style="font-size:12.5px;color:#7d7268">'+esc(o.h)+'</div>'
+            + '</div></div>';
+    });
+    html += '</div>';
+  });
+  wrap.innerHTML = html;
+  document.getElementById('qaTotal').textContent = total;
+  document.getElementById('qaKey').textContent = key;
+})();
+</script>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab');
+  var secs = document.querySelectorAll('main section');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('on'); });
+      secs.forEach(function(s){ s.classList.remove('on'); });
+      t.classList.add('on');
+      document.getElementById(t.dataset.t).classList.add('on');
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
