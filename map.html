@@ -25,6 +25,15 @@
   h1,h2,h3{margin:0;font-family:"Noto Serif TC","Songti TC",serif;font-weight:700;line-height:1.35}
 
   header{padding:52px 0 0}
+  .backlink{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;color:rgba(233,228,214,.62);text-decoration:none;
+    border:1px solid var(--hair);border-radius:2px;
+    padding:7px 15px;margin-bottom:26px;
+    transition:background .13s ease,color .13s ease,border-color .13s ease;
+  }
+  .backlink:hover{background:var(--cellar-2);color:var(--paper);border-color:rgba(233,228,214,.3)}
+  .backlink:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
   .rule-top{height:3px;background:var(--amber);width:52px;margin-bottom:22px}
   h1{font-size:clamp(25px,4.2vw,40px);font-weight:900;margin:12px 0 0}
   .sub{margin:15px 0 0;max-width:48em;color:rgba(233,228,214,.72);font-size:15px}
@@ -143,6 +152,7 @@
 
 <div class="wrap">
   <header>
+    <a href="/story.html" class="backlink">← 返回品牌故事介紹</a>
     <div class="rule-top"></div>
     <div class="eyebrow">弘川藏酒閣 · 西部走廊競爭地圖</div>
     <h1>宜蘭到台中，九個縣市</h1>
